@@ -24258,7 +24258,6 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       '': !$data.state_navbar
     }])
   }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Top Menu Items "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("nav", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [_hoisted_3, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
-    id: "toggle_nav_btn",
     "class": "toggle-left-nav-btn inline-block ml-20 pull-left",
     onClick: _cache[0] || (_cache[0] = function () {
       return $options.clickNagbar && $options.clickNagbar.apply($options, arguments);
