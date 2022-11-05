@@ -55,11 +55,11 @@ class UserController extends Controller
             $success = false;
             $message = 'Unauthorised';
         }
-
-        // response
         $response = [
             'success' => $success,
             'message' => $message,
+            'name_user' => auth()->user()->name,
+            'perfil_user'=>auth()->user()->perfil_id,
         ];
         return response()->json($response);
     }

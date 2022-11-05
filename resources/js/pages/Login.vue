@@ -119,11 +119,11 @@ export default {
         }
     },
     created() {
-		this.check_session();
+		this.checkSession();
     },
    
     methods: {
-        check_session() {
+        checkSession() {
 			let logueo=window.localStorage.getItem("logueo");
 		
             if (logueo) {
@@ -146,6 +146,9 @@ export default {
                             if (response.data.success) {
                                 window.localStorage.setItem(
                                     'logueo', JSON.stringify("TRUE")
+                                );
+                                window.localStorage.setItem(
+                                    'session_information', JSON.stringify(response.data)
                                 );
                                 this.$router.push({name: 'dashboard'})
                             } else {

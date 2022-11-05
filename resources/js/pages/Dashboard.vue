@@ -15,7 +15,7 @@
 						</a>
 					</div>
 				</div>	
-				<a  class="toggle-left-nav-btn inline-block ml-20 pull-left" @click="click_nagbar" href="#"><i class="zmdi zmdi-menu"></i></a>
+				<a  class="toggle-left-nav-btn inline-block ml-20 pull-left" @click="clickNagbar" href="#"><i class="zmdi zmdi-menu"></i></a>
 				<a id="toggle_mobile_search" data-toggle="collapse" data-target="#search_form" class="mobile-only-view" href="javascript:void(0);"><i class="zmdi zmdi-search"></i></a>
 				<a id="toggle_mobile_nav" class="mobile-only-view" href="javascript:void(0);"><i class="zmdi zmdi-more"></i></a>
 				<form id="search_form" role="search" class="top-nav-search collapse pull-left">
@@ -195,8 +195,9 @@ export default {
     },
 
 	created() {
-        this.click_nagbar(); 
-		this.check_session();
+        this.clickNagbar(); 
+		this.checkSession();
+		this.getModules();
     },
 
     // created() {
@@ -211,7 +212,7 @@ export default {
     //     next();
     // },
     methods: {
-		check_session() {
+		checkSession() {
 			let logueo=window.localStorage.getItem("logueo");
             if (logueo) {
             	this.$router.push({name: 'dashboard'})
@@ -220,7 +221,15 @@ export default {
 				this.$router.push("/")
 			 }
         },
-		click_nagbar(){
+		async getModules() {
+			let session_information=window.localStorage.getItem("session_information");
+			session_information=JSON.parse(session_information);
+			let perfil=session_information.perfil_user;
+			let response = await axios.get(
+                        "api/get_documentos_historial/" + item.id_documento
+                    );
+		},
+		clickNagbar(){
 		
 			if(!this.state_navbar){
 				this.state_navbar=true;
@@ -237,7 +246,7 @@ export default {
                     .then(response => {
                         if (response.data.success) {
 							window.localStorage.removeItem('logueo');
-							this.check_session() 
+							this.checkSession() 
                         } else {
                             console.log(response)
                         }
