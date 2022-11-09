@@ -8,7 +8,10 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use App\Http\Controllers\Controller;
-
+use App\Models\Module;
+use App\Models\Perfil;
+use App\Models\Permission;
+use Illuminate\Support\Arr;
 class UserController extends Controller
 {
     /**
@@ -62,6 +65,37 @@ class UserController extends Controller
             'perfil_user'=>auth()->user()->perfil_id,
         ];
         return response()->json($response);
+    }
+    public function getModules($id,Request $request)
+    {
+        $modules = Perfil::select(
+            'perfils.id  as perfil_id',
+            'perfils.description as description_perfil',
+            'permissions.id as permission_id',
+            'modules.id as module_id',
+            'modules.description  as description_module',
+            'sub_modules.id  as sub_module_id',
+            'sub_modules.description  as description_sub_module',
+            'modules.parent_module'
+        )
+        ->where('perfils.id','=',$id)
+            ->join('permissions', 'permissions.perfil_id', '=', 'perfils.id')
+            ->join('modules', 'permissions.module_id', '=', 'modules.id')
+            ->join('modules as  sub_modules', 'modules.id', '=', 'sub_modules.parent_module')
+            ->orderBy('modules.id', 'desc')
+            ->get();
+            $list_module = array();
+            $flag="";
+            $sub_modules = array();
+            foreach($modules as $row) {
+                  if($flag!=$row->description_module){
+                     $sub_modules = array();
+                     $flag=$row->description_module;
+                  }
+                    array_push($sub_modules, array('sub_module_id' => $row->sub_module_id, 'description_sub_module' => $row->description_sub_module));
+                    $list_module[$row->description_module]= $sub_modules;
+            }
+        return response()->json(['modules' => $list_module]);
     }
 
     /**

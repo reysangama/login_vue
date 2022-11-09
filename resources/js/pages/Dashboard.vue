@@ -89,64 +89,22 @@
 					<span>Main</span> 
 					<i class="zmdi zmdi-more"></i>
 				</li>
-				<li>
-					<a class="active" href="javascript:void(0);" data-toggle="collapse" data-target="#dashboard_dr"><div class="pull-left"><i class="zmdi zmdi-landscape mr-20"></i><span class="right-nav-text">Dashboard</span></div><div class="pull-right"><i class="zmdi zmdi-caret-down"></i></div><div class="clearfix"></div></a>
-					<ul id="dashboard_dr" class="collapse collapse-level-1">
-						<li>
-							<a class="active-page" href="index.html">Analytical</a>
-						</li>
-						<li>
-							<a href="index2.html">Demographic</a>
-						</li>
-						<li>
-							<a href="index3.html">Project</a>
-						</li>
-						<li>
-							<a href="index4.html">Hospital</a>
-						</li>
-						<li>
-							<a href="index5.html">HRM</a>
-						</li>
-						<li>
-							<a href="index6.html">Real Estate</a>
-						</li>
-						<li>
-							<a href="profile.html">profile</a>
-						</li>
-					</ul>
-				</li>
-				<li>
-					<a href="javascript:void(0);" data-toggle="collapse" data-target="#ecom_dr"><div class="pull-left"><i class="zmdi zmdi-shopping-basket mr-20"></i><span class="right-nav-text">E-Commerce</span></div><div class="pull-right"></div><div class="clearfix"></div></a>
-					<ul id="ecom_dr" class="collapse collapse-level-1">
-						<li>
-							<a href="e-commerce.html">Dashboard</a>
-						</li>
-						<li>
-							<a href="product.html">Products</a>
-						</li>
-						<li>
-							<a href="product-detail.html">Product Detail</a>
-						</li>
-						<li>
-							<a href="add-products.html">Add Product</a>
-						</li>
-						<li>
-							<a href="product-orders.html">Orders</a>
-						</li>
-						<li>
-							<a href="product-cart.html">Cart</a>
-						</li>
-						<li>
-							<a href="product-checkout.html">Checkout</a>
-						</li>
-					</ul>
-				</li>
-				<li>
-					<a href="javascript:void(0);" data-toggle="collapse" data-target="#app_dr"><div class="pull-left"><i class="zmdi zmdi-apps mr-20"></i><span class="right-nav-text">Apps </span></div><div class="pull-right"><i class="zmdi zmdi-caret-down"></i></div><div class="clearfix"></div></a>
-				</li>
-				<li>
-					<a href="#"><div class="pull-left"><i class="zmdi zmdi-flag mr-20"></i><span class="right-nav-text">widgets</span></div><div class="pull-right"></div><div class="clearfix"></div></a>
-				</li>
+				<template
+                        v-for="(module, index) in modules"
+                        :key="module.module_id"
+                    >
+					<li>
+						<a href="javascript:void(0);" data-toggle="collapse" :data-target="'#' + index" ><div class="pull-left"><i class="zmdi zmdi-smartphone-setup mr-20"></i><span class="right-nav-text">{{index}}</span></div><div class="pull-right"><i class="zmdi zmdi-caret-down"></i></div><div class="clearfix"></div></a>
+							<ul :id=index class="collapse collapse-level-1 two-col-list">
+							<li  v-for="(sub_module, index) in module"
+                       				 :key="sub_module.sub_module_id">
+								<a href="panels-wells.html">{{sub_module.description_sub_module}}</a>
+							</li>
+						</ul>	
+					</li>
+				</template>
+				
+				
 			</ul>
 		</div>
 		<!-- /Left Sidebar Menu -->
@@ -502,6 +460,7 @@ export default {
         return {
 			state_navbar: false,
             name: null,
+			modules:[],
         }
     },
 
@@ -536,9 +495,23 @@ export default {
 			let session_information=window.localStorage.getItem("session_information");
 			session_information=JSON.parse(session_information);
 			let perfil=session_information.perfil_user;
-			let response = await axios.get(
-                        "api/get_documentos_historial/" + item.id_documento
-                    );
+			
+			// let response = await axios.get(
+            //             "api/getModules/" + perfil
+            //         );
+			// console.log("saaaaaaaaaaaaaa");		
+			// console.log(response.data);		
+			
+			this.$axios.get('/sanctum/csrf-cookie').then(response => {
+					this.$axios.get(`/api/getModules/${perfil}`)
+						.then(response => {
+							this.modules=response.data.modules
+							console.log(response.data.modules)
+						})
+						.catch(function (error) {
+							console.error(error);
+						});
+				})
 		},
 		clickNagbar(){
 			
