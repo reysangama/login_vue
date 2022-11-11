@@ -94,11 +94,11 @@
                         :key="module.module_id"
                     >
 					<li>
-						<a href="javascript:void(0);" data-toggle="collapse" :data-target="'#' + index" ><div class="pull-left"><i class="zmdi zmdi-smartphone-setup mr-20"></i><span class="right-nav-text">{{index}}</span></div><div class="pull-right"><i class="zmdi zmdi-caret-down"></i></div><div class="clearfix"></div></a>
+						<a href="javascript:void(0);" data-toggle="collapse" :data-target="'#' + index" ><div class="pull-left"><i class="mr-20" :class="module[0].icon"></i><span class="right-nav-text">{{index}}</span></div><div class="pull-right"><i class="zmdi zmdi-caret-down"></i></div><div class="clearfix"></div></a>
 							<ul :id=index class="collapse collapse-level-1 two-col-list">
 							<li  v-for="(sub_module, index) in module"
                        				 :key="sub_module.sub_module_id">
-								<a href="panels-wells.html">{{sub_module.description_sub_module}}</a>
+									<router-link :to="sub_module.url" >{{sub_module.description_sub_module}}</router-link>
 							</li>
 						</ul>	
 					</li>
@@ -429,11 +429,8 @@
 
         <!-- Main Content -->
 		<div class="page-wrapper" :style="style_height">
-            <div class="container-fluid pt-25">
-				<!-- Row -->
-				<div class="row">
-					<!-- CONTENT CENTRAL -->
-				</div>
+            <div class="container-fluid pt-25"> 
+				<router-view></router-view>
 			</div>
 						<!-- Footer -->
 			<footer class="footer container-fluid pl-30 pr-30">

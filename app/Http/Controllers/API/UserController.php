@@ -75,8 +75,11 @@ class UserController extends Controller
             'modules.id as module_id',
             'modules.description  as description_module',
             'sub_modules.id  as sub_module_id',
+            'modules.icon',
+            'sub_modules.url',
             'sub_modules.description  as description_sub_module',
-            'modules.parent_module'
+            'modules.parent_module',
+
         )
         ->where('perfils.id','=',$id)
             ->join('permissions', 'permissions.perfil_id', '=', 'perfils.id')
@@ -92,7 +95,7 @@ class UserController extends Controller
                      $sub_modules = array();
                      $flag=$row->description_module;
                   }
-                    array_push($sub_modules, array('sub_module_id' => $row->sub_module_id, 'description_sub_module' => $row->description_sub_module));
+                    array_push($sub_modules, array('sub_module_id' => $row->sub_module_id, 'description_sub_module' => $row->description_sub_module,'icon'=>$row->icon,'url'=>$row->url));
                     $list_module[$row->description_module]= $sub_modules;
             }
         return response()->json(['modules' => $list_module]);
