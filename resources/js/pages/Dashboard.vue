@@ -519,6 +519,7 @@ export default {
 						.then(response => {
 							this.modules=response.data.modules
 							console.log(response.data.modules)
+							
 						})
 						.catch(function (error) {
 							console.error(error);
