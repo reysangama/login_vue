@@ -428,7 +428,7 @@
 		<!-- /Right Sidebar Backdrop -->
 
         <!-- Main Content -->
-		<div class="page-wrapper">
+		<div class="page-wrapper" :style="style_height">
             <div class="container-fluid pt-25">
 				<!-- Row -->
 				<div class="row">
@@ -461,6 +461,11 @@ export default {
 			state_navbar: false,
             name: null,
 			modules:[],
+			style_height: {
+				"min-height": "661px !important",
+		
+			}
+
         }
     },
 
@@ -468,6 +473,7 @@ export default {
         this.clickNagbar(); 
 		this.checkSession();
 		this.getModules();
+		this.addStyleWrapper();
     },
 
     // created() {
@@ -482,6 +488,12 @@ export default {
     //     next();
     // },
     methods: {
+		addStyleWrapper(){
+			let height_now=window.innerHeight+"px";
+			this.style_height={
+				"min-height": height_now+" !important",
+			};
+		},
 		checkSession() {
 			let logueo=window.localStorage.getItem("logueo");
             if (logueo) {
@@ -514,8 +526,6 @@ export default {
 				})
 		},
 		clickNagbar(){
-			
-
 			if(!this.state_navbar){
 				this.state_navbar=true;
 			}else{

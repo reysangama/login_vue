@@ -1,7 +1,5 @@
 <template>
-		<!--/Preloader-->
-		
-		<div class="wrapper pa-0">
+		<div class="wrapper pa-0"  >
 			<header class="sp-header">
 				<div class="sp-logo-wrap pull-left">
 					<a href="index.html">
@@ -9,48 +7,43 @@
 						<span class="brand-text">Philbert</span>
 					</a>
 				</div>
-				<div class="form-group mb-0 pull-right">
-					<span class="inline-block pr-10">Don't have an account?</span>
-					<a class="inline-block btn btn-info btn-success btn-rounded btn-outline" href="signup.html">Sign Up</a>
-				</div>
 				<div class="clearfix"></div>
 			</header>
 			
-			<!-- Main Content -->
-			<div class="page-wrapper pa-0 ma-0 auth-page">
+			<div class="page-wrapper pa-0 ma-0 auth-page" :style="style_height" >
 				<div class="container-fluid">
-					<!-- Row -->
 					<div class="table-struct full-width full-height">
 						<div class="table-cell vertical-align-middle auth-form-wrap">
 							<div class="auth-form  ml-auto mr-auto no-float">
-								<div class="row">
-									<div class="col-sm-12 col-xs-12">
+								<div class="row login-border">
+									<div class="col-sm-12 mt-30 col-xs-12">
 										<div class="mb-30">
-											<h3 class="text-center txt-dark mb-10">Sign in to Philbert</h3>
-											<h6 class="text-center nonecase-font txt-grey">Enter your details below</h6>
+											<h2 class="text-center txt-dark mb-10 login-title">SIS VENT</h2>
+											<h6 class="text-center nonecase-font txt-grey">Ingrese sus datos a continuación</h6>
 										</div>	
 										<div class="form-wrap">
 											<form action="#">
 												<div class="form-group">
-													<label class="control-label mb-10" for="exampleInputEmail_2">Email address</label>
-													<input type="email"  v-model="email" class="form-control" required="" id="exampleInputEmail_2" placeholder="Enter email">
+													<label class="control-label mb-10" for="exampleInputEmail_2">Usuario</label>
+													<div class="input-group">
+														<div class="input-group-addon"><i class="icon-user"></i></div>
+														<input type="text" v-model="email"  class="form-control" id="exampleInputuname_1" placeholder="Usuario">
+													</div>
 												</div>
 												<div class="form-group">
-													<label class="pull-left control-label mb-10" for="exampleInputpwd_2">Password</label>
-													<a class="capitalize-font txt-primary block mb-10 pull-right font-12" href="forgot-password.html">forgot password ?</a>
+													<label class="pull-left control-label mb-10" for="exampleInputpwd_2">Contraseña</label>
 													<div class="clearfix"></div>
-													<input type="password" v-model="password" class="form-control" required="" id="exampleInputpwd_2" placeholder="Enter pwd">
+													<div class="input-group">
+																<div class="input-group-addon"><i class="icon-lock"></i></div>
+																<input type="password" v-model="password" class="form-control" id="exampleInputpwd_1" placeholder="Contraseña">
+													</div>
 												</div>
 												
 												<div class="form-group">
-													<div class="checkbox checkbox-primary pr-10 pull-left">
-														<input id="checkbox_2" required="" type="checkbox">
-														<label for="checkbox_2"> Keep me logged in</label>
-													</div>
 													<div class="clearfix"></div>
 												</div>
 												<div class="form-group text-center">
-													<button  @click="handleSubmit" type="submit" class="btn btn-info btn-success btn-rounded">sign in</button>
+													<button  @click="handleSubmit" type="submit" class="btn btn-info btn-success btn-rounded">Iniciar</button>
 												</div>
 											</form>
 										</div>
@@ -59,70 +52,32 @@
 							</div>
 						</div>
 					</div>
-					<!-- /Row -->	
 				</div>
-				
 			</div>
-			<!-- /Main Content -->
-		
 		</div>
-    <!-- <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-
-                <div class="alert alert-danger" role="alert" v-if="error !== null">
-                    {{ error }}
-                </div>
-
-                <div class="card card-default">
-                    <div class="card-header">Login</div>
-                    <div class="card-body">
-                        <form>
-                            <div class="form-group row">
-                                <label for="email" class="col-sm-4 col-form-label text-md-right">E-Mail Address</label>
-                                <div class="col-md-6">
-                                    <input id="email" type="email" class="form-control" v-model="email" required
-                                           autofocus autocomplete="off">
-                                </div>
-                            </div>
-
-                            <div class="form-group row">
-                                <label for="password" class="col-md-4 col-form-label text-md-right">Password</label>
-                                <div class="col-md-6">
-                                    <input id="password" type="password" class="form-control" v-model="password"
-                                           required autocomplete="off">
-                                </div>
-                            </div>
-
-                            <div class="form-group row mb-0">
-                                <div class="col-md-8 offset-md-4">
-                                    <button type="submit" class="btn btn-primary" @click="handleSubmit">
-                                        Login
-                                    </button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
 </template>
 
 <script>
+
 export default {
     data() {
         return {
             email: "",
             password: "",
-            error: null
+            error: null,
+			styleObject: {
+				"min-height": "661px !important",
+			}
         }
     },
     created() {
 		this.checkSession();
+		this.addStyleWrapper();
     },
+	
    
     methods: {
+		
         checkSession() {
 			let logueo=window.localStorage.getItem("logueo");
 		
@@ -134,6 +89,13 @@ export default {
 				this.$router.push("/")
 			 }
         },
+		addStyleWrapper(){
+			let height_now=window.innerHeight+"px";
+			this.style_height={
+				"min-height": height_now+" !important",
+			};
+			
+		},
         handleSubmit(e) {
             e.preventDefault()
             if (this.password.length > 0) {
@@ -165,3 +127,29 @@ export default {
     
 }
 </script>
+
+<style scoped>
+.modal {
+    background-color: rgba(69, 48, 53, 0.5) !important;
+}
+.login-border{
+	background-color: #fff;
+	border-radius: 10px;
+  	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
+			0 10px 10px rgba(0,0,0,0.22);
+	position: relative;
+	overflow: hidden;
+	width: 768px;
+	max-width: 120%;
+	min-height: 400px;
+	
+}
+.body-login{
+	background-color: #f6f5f7;	
+}
+.login-title{
+	font-weight: bold;
+}
+</style>
+
+

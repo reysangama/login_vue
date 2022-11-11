@@ -38,9 +38,9 @@ export default {
         }
     },
     created() {
-        if (window.Laravel.isLoggedin) {
-            this.isLoggedIn = true
-        }
+        // if (window.Laravel.isLoggedin) {
+        //     this.isLoggedIn = true
+        // }
     },
     methods: {
         logout(e) {
