@@ -1,8 +1,14 @@
 <template>
 
-<div class="wrapper theme-1-active pimary-color-green" :class="{
+<div  class="wrapper theme-1-active pimary-color-green" :class="{
                         ' slide-nav-toggle': state_navbar,
                         '': !state_navbar,
+						'sidebar-hover': state_hover_navbar,
+                        '': !state_hover_navbar,
+						'mobile-nav-open': state_mobile_nav,
+                        '': !state_mobile_nav,
+						
+						
                     }">
 		<!-- Top Menu Items -->
 		<nav class="navbar navbar-inverse navbar-fixed-top">
@@ -18,7 +24,7 @@
 				
 				<a class="toggle-left-nav-btn inline-block ml-20 pull-left"  @click="clickNagbar" href="#"><i class="zmdi zmdi-menu"></i></a>
 				<a id="toggle_mobile_search" data-toggle="collapse" data-target="#search_form" class="mobile-only-view" href="javascript:void(0);"><i class="zmdi zmdi-search"></i></a>
-				<a id="toggle_mobile_nav" class="mobile-only-view" href="javascript:void(0);"><i class="zmdi zmdi-more"></i></a>
+				<a id="toggle_mobile_nav"  @click="clickMovileNav"  class="mobile-only-view" href="javascript:void(0);"><i class="zmdi zmdi-more"></i></a>
 				<form id="search_form" role="search" class="top-nav-search collapse pull-left">
 					<div class="input-group">
 						<input type="text" name="example-input1-group2" class="form-control" placeholder="Search">
@@ -84,7 +90,7 @@
 		
 		<!-- Left Sidebar Menu -->
 		<div class="fixed-sidebar-left">
-			<ul class="nav navbar-nav side-nav nicescroll-bar">
+			<ul class="nav navbar-nav side-nav nicescroll-bar" @mouseover="hoverNav" @mouseleave="leaveNav">
 				<li class="navigation-header">
 					<span>Main</span> 
 					<i class="zmdi zmdi-more"></i>
@@ -453,6 +459,9 @@ export default {
     data() {
         return {
 			state_navbar: false,
+			state_navbar: true,
+			state_mobile_nav: true,
+			state_hover_navbar: false,
             name: null,
             modules: [],
             style_height: {
@@ -483,6 +492,19 @@ export default {
     //     next();
     // },
     methods: {
+		clickMovileNav(){
+			if(!this.state_mobile_nav){
+				this.state_mobile_nav=true;
+			}else{
+				this.state_mobile_nav=false;
+			}
+		},
+		leaveNav(){
+			this.state_hover_navbar=false;
+		},
+		hoverNav(){
+			this.state_hover_navbar=true;
+		},
 		addStyleWrapper(){
 			let height_now=window.innerHeight+"px";
 			this.style_height={
