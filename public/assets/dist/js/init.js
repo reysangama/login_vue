@@ -169,10 +169,10 @@ var philbert = function(){
 		$wrapper.toggleClass('open-setting-panel').removeClass('open-right-sidebar');
 		return false;
 	});
-	$(document).on('click', '#toggle_mobile_nav', function (e) {
-		$wrapper.toggleClass('mobile-nav-open').removeClass('open-right-sidebar');
-		return;
-	});
+	// $(document).on('click', '#toggle_mobile_nav', function (e) {
+	// 	$wrapper.toggleClass('mobile-nav-open').removeClass('open-right-sidebar');
+	// 	return;
+	// });
 	
 
 	$(document).on("mouseenter mouseleave",".wrapper > .fixed-sidebar-left", function(e) {
