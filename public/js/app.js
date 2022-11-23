@@ -24500,15 +24500,7 @@ var _hoisted_7 = {
 var _hoisted_8 = {
   "class": "col-sm-12 mt-30 col-xs-12"
 };
-var _hoisted_9 = /*#__PURE__*/_withScopeId(function () {
-  return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-    "class": "mb-30"
-  }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h2", {
-    "class": "text-center txt-dark mb-10 login-title"
-  }, "SIS VENT"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h6", {
-    "class": "text-center nonecase-font txt-grey"
-  }, "Ingrese sus datos a continuación")], -1 /* HOISTED */);
-});
+var _hoisted_9 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"mb-30\" data-v-3b6adb30><div class=\"imgcontainer\" data-v-3b6adb30><img src=\"assets/img_avatar2.png\" alt=\"Avatar\" class=\"avatar\" data-v-3b6adb30></div><h2 class=\"text-center txt-dark mb-10 login-title\" data-v-3b6adb30>SISTEMA VENTAS</h2><h6 class=\"text-center nonecase-font txt-grey\" data-v-3b6adb30>Ingrese sus datos a continuación </h6></div>", 1);
 var _hoisted_10 = {
   "class": "form-wrap"
 };
@@ -24521,7 +24513,7 @@ var _hoisted_12 = {
 var _hoisted_13 = /*#__PURE__*/_withScopeId(function () {
   return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
     "class": "control-label mb-10",
-    "for": "exampleInputEmail_2"
+    "for": "psw"
   }, "Usuario", -1 /* HOISTED */);
 });
 var _hoisted_14 = {
@@ -24540,7 +24532,7 @@ var _hoisted_16 = {
 var _hoisted_17 = /*#__PURE__*/_withScopeId(function () {
   return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
     "class": "pull-left control-label mb-10",
-    "for": "exampleInputpwd_2"
+    "for": "psw"
   }, "Contraseña", -1 /* HOISTED */);
 });
 var _hoisted_18 = /*#__PURE__*/_withScopeId(function () {
@@ -24566,7 +24558,7 @@ var _hoisted_21 = /*#__PURE__*/_withScopeId(function () {
   })], -1 /* HOISTED */);
 });
 var _hoisted_22 = {
-  "class": "form-group text-center"
+  "class": "form-group text-center boton"
 };
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [_hoisted_2, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
@@ -30164,7 +30156,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.modal[data-v-3b6adb30] {\r\n    background-color: rgba(69, 48, 53, 0.5) !important;\n}\n.login-border[data-v-3b6adb30]{\r\n\tbackground-color: #fff;\r\n\tborder-radius: 10px;\r\n  \tbox-shadow: 0 14px 28px rgba(0,0,0,0.25), \r\n\t\t\t0 10px 10px rgba(0,0,0,0.22);\r\n\tposition: relative;\r\n\toverflow: hidden;\r\n\twidth: 768px;\r\n\tmax-width: 120%;\r\n\tmin-height: 400px;\n}\n.body-login[data-v-3b6adb30]{\r\n\tbackground-color: #f6f5f7;\n}\n.login-title[data-v-3b6adb30]{\r\n\tfont-weight: bold;\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.modal[data-v-3b6adb30] {\r\n\tbackground-color: rgba(69, 48, 53, 0.5) !important;\n}\n.login-border[data-v-3b6adb30] {\r\n\tbackground-color: #fff;\r\n\tborder-radius: 10px;\r\n\tbox-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),\r\n\t\t0 10px 10px rgba(0, 0, 0, 0.22);\r\n\tposition: relative;\r\n\toverflow: hidden;\r\n\twidth: 378px;\r\n\tmax-width: 100%;\r\n\t/* min-height: 500px; */\r\n\tmax-height: 100%;\n}\n.body-login[data-v-3b6adb30] {\r\n\tbackground-color: #f6f5f7;\n}\n.login-title[data-v-3b6adb30] {\r\n\t/* font-weight: bold; */\r\n\tfont-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif\n}\n.form-control[data-v-3b6adb30] {\r\n\tborder-radius: 10px;\n}\n.imgcontainer[data-v-3b6adb30] {\r\n  text-align: center;\r\n  margin: 0.5px 0 12px 0;\n}\nimg.avatar[data-v-3b6adb30] {\r\n  width: 20%;\r\n  border-radius: 50%;\n}\nspan.psw[data-v-3b6adb30] {\r\n  float: right;\r\n  padding-top: 16px;\n}\n.nicescroll-bar[data-v-3b6adb30] {\r\n    overflow-x: hidden;\n}\n@media screen and (max-width: 300px) {\nspan.psw[data-v-3b6adb30] {\r\n     display: block;\r\n     float: none;\n}\n}\r\n\r\n\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
