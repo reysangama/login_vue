@@ -478,6 +478,7 @@ export default {
         this.checkSession();
         this.getModules();
         this.addStyleWrapper();
+		// this.checkSession2();
     },
 
     // created() {
@@ -492,6 +493,7 @@ export default {
     //     next();
     // },
     methods: {
+		
 		clickMovileNav(){
 			if(!this.state_mobile_nav){
 				this.state_mobile_nav=true;
@@ -511,14 +513,32 @@ export default {
 				"min-height": height_now+" !important",
 			};
 		},
-		checkSession() {
-			let logueo=window.localStorage.getItem("logueo");
-            if (logueo) {
-            	this.$router.push({name: 'dashboard'})
-       		 }else{
+		//  checkSession() {
+		// 	let logueo=window.localStorage.getItem("logueo");
+        //     if (logueo) {
+        //     	this.$router.push({name: 'dashboard'})
+       	// 	 }else{
 			
-				this.$router.push("/")
-			 }
+		// 		this.$router.push("/")
+		// 	 }
+        // },
+		async checkSession() {
+			this.$axios.get("/sanctum/csrf-cookie").then((response) => {
+                this.$axios
+                    .get(`/api/getSession/`)
+                    .then((response) => {
+						let logueo=response.data.success;
+						console.log(logueo);
+					   if (response.data.success) {
+            				this.$router.push({name: 'dashboard'})
+       		 			}else{
+							this.$router.push("/")
+						}
+                    })
+                    .catch(function (error) {
+                        console.error(error);
+                    });
+            });
         },
         async getModules() {
             let session_information = window.localStorage.getItem(

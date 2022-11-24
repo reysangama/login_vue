@@ -87,17 +87,24 @@ export default {
 
 	methods: {
 
-		checkSession() {
-			let logueo = window.localStorage.getItem("logueo");
-
-			if (logueo) {
-
-				this.$router.push({ name: 'dashboard' })
-			} else {
-
-				this.$router.push("/")
-			}
-		},
+		async checkSession() {
+			this.$axios.get("/sanctum/csrf-cookie").then((response) => {
+                this.$axios
+                    .get(`/api/getSession/`)
+                    .then((response) => {
+						let logueo=response.data.success;
+						console.log(logueo);
+					   if (response.data.success) {
+            				this.$router.push({name: 'dashboard'})
+       		 			}else{
+							this.$router.push("/")
+						}
+                    })
+                    .catch(function (error) {
+                        console.error(error);
+                    });
+            });
+        },
 		addStyleWrapper() {
 			let height_now = window.innerHeight + "px";
 			this.style_height = {
@@ -115,12 +122,12 @@ export default {
 					})
 						.then(response => {
 							if (response.data.success) {
-								window.localStorage.setItem(
-									'logueo', JSON.stringify("TRUE")
-								);
-								window.localStorage.setItem(
-									'session_information', JSON.stringify(response.data)
-								);
+								// window.localStorage.setItem(
+								// 	'logueo', JSON.stringify("TRUE")
+								// );
+								// window.localStorage.setItem(
+								// 	'session_information', JSON.stringify(response.data)
+								// );
 								this.$router.push({ name: 'dashboard' })
 							} else {
 								this.error = response.data.message

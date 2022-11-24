@@ -122,4 +122,22 @@ class UserController extends Controller
         ];
         return response()->json($response);
     }
+    
+    public function getSession()
+    {
+        try {
+            $success =Auth::check();
+        } catch (\Illuminate\Database\QueryException $ex) {
+            $success = false;
+            $message = $ex->getMessage();
+        }
+
+        // response
+        $response = [
+            'success' => $success,
+        ];
+        return response()->json($response);
+    }
+
+    
 }
