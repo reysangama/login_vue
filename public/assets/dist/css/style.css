@@ -3174,6 +3174,7 @@ footer {
   color: #212121; }
 
 .input-group-addon {
+  position: relative;
   background: transparent none repeat scroll 0 0;
   border-color: #dedede;
   border-radius: 0;

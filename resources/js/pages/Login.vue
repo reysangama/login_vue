@@ -25,26 +25,24 @@
 										<h6 class="text-center nonecase-font txt-grey">Ingrese sus datos a continuación
 										</h6>
 									</div>
-									<div class="form-wrap">
+									<div class="form-wrap is-relative">
 										<form action="#">
 											<div class="form-group">
-												<label class="control-label mb-10"
-													for="psw">Usuario</label>
+												<label class="control-label mb-10" for="psw">Usuario</label>
 												<div class="input-group">
 													<div class="input-group-addon"><i class="icon-user"></i></div>
 													<input type="text" v-model="email" class="form-control"
 														id="exampleInputuname_1" placeholder="Usuario">
 												</div>
 											</div>
-											<div class="form-group">
-												<label class="pull-left control-label mb-10"
-													for="psw">Contraseña</label>
+											<div class="form-group ">
+												<label class="pull-left control-label mb-10" for="psw">Contraseña</label>&nbsp;
 												<div class="clearfix"></div>
-												<div class="input-group">
-													<div class="input-group-addon"><i class="icon-lock"></i></div>
-													<input type="password" v-model="password" class="form-control"
-														id="exampleInputpwd_1" placeholder="Contraseña">
-												</div>
+												<div class="input-group"> <span class="input-group-addon"><i class="icon-lock"></i></span>
+													<input :type="passwordFieldType" v-model="password" class="form-control"
+													id="password" placeholder="Contraseña">
+														<span class="input-group-addon"><i class="fas fa" :class="[passwordFieldIcon]" @click="hidePassword = !hidePassword"></i></span> 
+													</div>
 											</div>
 
 											<div class="form-group">
@@ -65,6 +63,18 @@
 		</div>
 	</div>
 </template>
+
+<script  setup>
+
+import {  ref, computed } from "vue";
+
+const email = ref("");
+const hidePassword = ref(true);
+const password = ref("");
+
+const passwordFieldIcon = computed(() => hidePassword.value ? "fa-eye" : "fa-eye-slash");
+const passwordFieldType = computed(() => hidePassword.value ? "password" : "text");
+</script>
 
 <script>
 
@@ -137,10 +147,41 @@ export default {
 }
 </script>
 
+
+
 <style scoped>
 .modal {
 	background-color: rgba(69, 48, 53, 0.5) !important;
 }
+
+
+
+div.is-relative{
+  max-width: 420px;
+  position: relative;
+}
+#icon{
+  position: absolute;
+  display: block;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  user-select: none;
+  cursor: pointer;
+}
+/* import */
+.input-icon {
+  color: #191919;
+  position: absolute;
+  width: 80px;
+  height: 20px;
+  left: 12px;
+  top: 50%;
+  margin-left: 20px;
+  transform: translateY(-50%);
+}
+
+
+
 
 .login-border {
 	background-color: #fff;
@@ -165,9 +206,10 @@ export default {
 	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
 
-.form-control {
+input.form-control{
 	border-radius: 10px;
 }
+
 .imgcontainer {
   text-align: center;
   margin: 0.5px 0 12px 0;
