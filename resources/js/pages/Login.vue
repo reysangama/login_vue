@@ -49,8 +49,7 @@
 												<div class="clearfix"></div>
 											</div>
 											<div class="form-group text-center boton">
-												<button @click="handleSubmit" type="submit"
-													class="btn btn-info btn-success btn-rounded">Iniciar</button>
+												<button @click="handleSubmit" type="submit" class="btn btn-success btn-anim btn-rounded"><i class="icon-rocket"></i><span class="btn-text">Iniciar</span></button>
 											</div>
 										</form>
 									</div>

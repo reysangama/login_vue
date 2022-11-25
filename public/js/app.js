@@ -24596,6 +24596,17 @@ var _hoisted_23 = /*#__PURE__*/_withScopeId(function () {
 var _hoisted_24 = {
   "class": "form-group text-center boton"
 };
+var _hoisted_25 = /*#__PURE__*/_withScopeId(function () {
+  return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
+    "class": "icon-rocket"
+  }, null, -1 /* HOISTED */);
+});
+var _hoisted_26 = /*#__PURE__*/_withScopeId(function () {
+  return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
+    "class": "btn-text"
+  }, "Iniciar", -1 /* HOISTED */);
+});
+var _hoisted_27 = [_hoisted_25, _hoisted_26];
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [_hoisted_2, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
     "class": "page-wrapper pa-0 ma-0 auth-page",
@@ -24626,8 +24637,8 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       return $options.handleSubmit && $options.handleSubmit.apply($options, arguments);
     }),
     type: "submit",
-    "class": "btn btn-info btn-success btn-rounded"
-  }, "Iniciar")])])])])])])])])])], 4 /* STYLE */)]);
+    "class": "btn btn-success btn-anim btn-rounded"
+  }, _hoisted_27)])])])])])])])])])], 4 /* STYLE */)]);
 }
 
 /***/ }),
