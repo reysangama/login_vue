@@ -1,15 +1,16 @@
 <?php
 
-namespace App\Models;
+namespace App\Models\Security;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
-class Perfil extends Model
+
+class Profile extends Model
 {
     use HasFactory;
     use SoftDeletes;
-    protected $table = 'perfils';
+    protected $table = 'profiles';
     protected $primaryKey = 'id';
-
 }
+
