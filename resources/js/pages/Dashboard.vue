@@ -528,9 +528,8 @@ export default {
                     .get(`/api/getSession/`)
                     .then((response) => {
 						let logueo=response.data.success;
-						console.log(logueo);
 					   if (response.data.success) {
-            				this.$router.push({name: 'dashboard'})
+            				// this.$router.push({name: 'dashboard'})
        		 			}else{
 							this.$router.push("/")
 						}
@@ -547,18 +546,12 @@ export default {
             session_information = JSON.parse(session_information);
             let perfil = session_information.perfil_user;
 
-            // let response = await axios.get(
-            //             "api/getModules/" + perfil
-            //         );
-            // console.log("saaaaaaaaaaaaaa");
-            // console.log(response.data);
-
             this.$axios.get("/sanctum/csrf-cookie").then((response) => {
                 this.$axios
                     .get(`/api/getModules/${perfil}`)
                     .then((response) => {
                         this.modules = response.data.modules;
-                        console.log(response.data.modules);
+                       
                     })
                     .catch(function (error) {
                         console.error(error);

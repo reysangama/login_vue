@@ -6,7 +6,7 @@ use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Carbon\Carbon;
 
-class PerfilSeeder extends Seeder
+class ProfileSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -21,13 +21,13 @@ class PerfilSeeder extends Seeder
              'created_at' => Carbon::now(),
              ]
         ];
-        DB::table('perfils')->insert($data);
+        DB::table('profiles')->insert($data);
 
         DB::table('users')->insert([
             'name' => "admin",
             'email' => "admin@gmail.com",
             'password' => bcrypt('123456'),
-            'perfil_id' =>1,
+            'profile_id' =>1,
             'created_at' => Carbon::now(),
         ]);
     }

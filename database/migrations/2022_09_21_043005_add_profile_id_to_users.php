@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddPerfilIdToUsers extends Migration
+class AddProfileIdToUsers extends Migration
 {
     /**
      * Run the migrations.
@@ -14,10 +14,10 @@ class AddPerfilIdToUsers extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->bigInteger('perfil_id')->unsigned()->index();
-            $table->foreign('perfil_id')
+            $table->bigInteger('profile_id')->unsigned()->index();
+            $table->foreign('profile_id')
             ->references('id')
-            ->on('perfils');
+            ->on('profiles');
             
         });
     }
@@ -30,8 +30,8 @@ class AddPerfilIdToUsers extends Migration
     public function down()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->dropForeign(['perfil_id']);
-            $table->dropColumn('perfil_id');
+            $table->dropForeign(['profile_id']);
+            $table->dropColumn('profile_id');
         });
     }
 }
