@@ -462,6 +462,7 @@ export default {
 			state_navbar: true,
 			state_mobile_nav: true,
 			state_hover_navbar: false,
+			profile_id:false,
             name: null,
             modules: [],
             style_height: {
@@ -529,7 +530,7 @@ export default {
                     .then((response) => {
 						let logueo=response.data.success;
 					   if (response.data.success) {
-            				// this.$router.push({name: 'dashboard'})
+            			
        		 			}else{
 							this.$router.push("/")
 						}
@@ -540,15 +541,10 @@ export default {
             });
         },
         async getModules() {
-            let session_information = window.localStorage.getItem(
-                "session_information"
-            );
-            session_information = JSON.parse(session_information);
-            let perfil = session_information.perfil_user;
-
+         
             this.$axios.get("/sanctum/csrf-cookie").then((response) => {
                 this.$axios
-                    .get(`/api/getModules/${perfil}`)
+                    .get(`/api/getModules/`)
                     .then((response) => {
                         this.modules = response.data.modules;
                        

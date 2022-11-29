@@ -66,7 +66,7 @@ class UserController extends Controller
         ];
         return response()->json($response);
     }
-    public function getModules($id,Request $request)
+    public function getModules(Request $request)
     {
         $modules = Profile::select(
             'profiles.id  as profile_id',
@@ -81,7 +81,7 @@ class UserController extends Controller
             'modules.parent_module',
 
         )
-        ->where('profiles.id','=',$id)
+        ->where('profiles.id','=',auth()->user()->profile_id)
             ->join('permissions', 'permissions.profile_id', '=', 'profiles.id')
             ->join('modules', 'permissions.module_id', '=', 'modules.id')
             ->join('modules as  sub_modules', 'modules.id', '=', 'sub_modules.parent_module')
@@ -135,6 +135,7 @@ class UserController extends Controller
         // response
         $response = [
             'success' => $success,
+           
         ];
         return response()->json($response);
     }
