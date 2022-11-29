@@ -116,6 +116,7 @@ methods: {
                 this.$axios.post('/api/profiles/', this.form_profile)
                     .then(response => {
                       console.log(response.data.status);
+                      
                     })
                     .catch(function (error) {
                         console.error(error);
