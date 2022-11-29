@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use App\Http\Controllers\Controller;
 use App\Models\Module;
-use App\Models\Perfil;
+use App\Models\Security\Profile;
 use App\Models\Permission;
 use Illuminate\Support\Arr;
 class UserController extends Controller
@@ -62,15 +62,15 @@ class UserController extends Controller
             'success' => $success,
             'message' => $message,
             'name_user' => auth()->user()->name,
-            'perfil_user'=>auth()->user()->perfil_id,
+            'perfil_user'=>auth()->user()->profile_id,
         ];
         return response()->json($response);
     }
     public function getModules($id,Request $request)
     {
-        $modules = Perfil::select(
-            'perfils.id  as perfil_id',
-            'perfils.description as description_perfil',
+        $modules = Profile::select(
+            'profiles.id  as profile_id',
+            'profiles.description as description_perfil',
             'permissions.id as permission_id',
             'modules.id as module_id',
             'modules.description  as description_module',
@@ -81,8 +81,8 @@ class UserController extends Controller
             'modules.parent_module',
 
         )
-        ->where('perfils.id','=',$id)
-            ->join('permissions', 'permissions.perfil_id', '=', 'perfils.id')
+        ->where('profiles.id','=',$id)
+            ->join('permissions', 'permissions.profile_id', '=', 'profiles.id')
             ->join('modules', 'permissions.module_id', '=', 'modules.id')
             ->join('modules as  sub_modules', 'modules.id', '=', 'sub_modules.parent_module')
             ->orderBy('modules.id', 'desc')
@@ -122,4 +122,22 @@ class UserController extends Controller
         ];
         return response()->json($response);
     }
+    
+    public function getSession()
+    {
+        try {
+            $success =Auth::check();
+        } catch (\Illuminate\Database\QueryException $ex) {
+            $success = false;
+            $message = $ex->getMessage();
+        }
+
+        // response
+        $response = [
+            'success' => $success,
+        ];
+        return response()->json($response);
+    }
+
+    
 }

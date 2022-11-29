@@ -1,5 +1,5 @@
 <template>
- 
+
 <div  class="wrapper theme-1-active pimary-color-green" :class="{
                         ' slide-nav-toggle': state_navbar,
                         '': !state_navbar,
@@ -10,8 +10,6 @@
 						
 						
                     }">
-
-
 		<!-- Top Menu Items -->
 		<nav class="navbar navbar-inverse navbar-fixed-top">
 			<div class="mobile-only-brand pull-left">
@@ -26,7 +24,7 @@
 				
 				<a class="toggle-left-nav-btn inline-block ml-20 pull-left"  @click="clickNagbar" href="#"><i class="zmdi zmdi-menu"></i></a>
 				<a id="toggle_mobile_search" data-toggle="collapse" data-target="#search_form" class="mobile-only-view" href="javascript:void(0);"><i class="zmdi zmdi-search"></i></a>
-				<a id="toggle_mobile_nav" @click="clickMovileNav" class="mobile-only-view" href="javascript:void(0);"><i class="zmdi zmdi-more"></i></a>
+				<a id="toggle_mobile_nav"  @click="clickMovileNav"  class="mobile-only-view" href="javascript:void(0);"><i class="zmdi zmdi-more"></i></a>
 				<form id="search_form" role="search" class="top-nav-search collapse pull-left">
 					<div class="input-group">
 						<input type="text" name="example-input1-group2" class="form-control" placeholder="Search">
@@ -92,7 +90,7 @@
 		
 		<!-- Left Sidebar Menu -->
 		<div class="fixed-sidebar-left">
-			<ul class="nav navbar-nav side-nav nicescroll-bar "  @mouseover="hoverNav" @mouseleave="leaveNav">
+			<ul class="nav navbar-nav side-nav nicescroll-bar" @mouseover="hoverNav" @mouseleave="leaveNav">
 				<li class="navigation-header">
 					<span>Main</span> 
 					<i class="zmdi zmdi-more"></i>
@@ -436,25 +434,22 @@
 		<!-- /Right Sidebar Backdrop -->
 
         <!-- Main Content -->
-		<div class="page-wrapper" :style="style_height">
-            <div class="container-fluid pt-25"> 
-				<router-view></router-view>
-			</div>
-						<!-- Footer -->
-			<footer class="footer container-fluid pl-30 pr-30">
-				<div class="row">
-					<div class="col-sm-12">
-						<p>2017 &copy; Philbert. Pampered by Hencework</p>
-					</div>
-				</div>
-			</footer>
-			<!-- /Footer -->
-			
-		</div>
+        <div class="page-wrapper" :style="style_height">
+            <div class="container-fluid pt-25">
+                <router-view></router-view>
+            </div>
+            <!-- Footer -->
+            <footer class="footer container-fluid pl-30 pr-30">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <p>2017 &copy; Philbert. Pampered by Hencework</p>
+                    </div>
+                </div>
+            </footer>
+            <!-- /Footer -->
+        </div>
         <!-- /Main Content -->
-</div>
-
-
+    </div>
 </template>
 
 <script>
@@ -463,24 +458,27 @@ export default {
     name: "Dashboard",
     data() {
         return {
+			state_navbar: false,
 			state_navbar: true,
 			state_mobile_nav: true,
 			state_hover_navbar: false,
             name: null,
-			modules:[],
-			style_height: {
-				"min-height": "661px !important",
-		
-			}
+            modules: [],
+            style_height: {
 
-        }
+                // "max-height": "120% !important",
+                "min-height": "661px !important",
+            },
+        };
     },
 
-	created() {
-        this.clickNagbar(); 
-		this.checkSession();
-		this.getModules();
-		this.addStyleWrapper();
+    created() {
+        this.clickNagbar();
+        this.clickNav();
+        this.checkSession();
+        this.getModules();
+        this.addStyleWrapper();
+		// this.checkSession2();
     },
 
     // created() {
@@ -490,11 +488,12 @@ export default {
     // },
     // beforeRouteEnter(to, from, next) {
     //     if (!window.Laravel.isLoggedin) {
-	// 		this.$router.push({name: 'login'})
+    // 		this.$router.push({name: 'login'})
     //     }
     //     next();
     // },
     methods: {
+		
 		clickMovileNav(){
 			if(!this.state_mobile_nav){
 				this.state_mobile_nav=true;
@@ -514,64 +513,89 @@ export default {
 				"min-height": height_now+" !important",
 			};
 		},
-		checkSession() {
-			let logueo=window.localStorage.getItem("logueo");
-            if (logueo) {
-            	this.$router.push({name: 'dashboard'})
-       		 }else{
+		//  checkSession() {
+		// 	let logueo=window.localStorage.getItem("logueo");
+        //     if (logueo) {
+        //     	this.$router.push({name: 'dashboard'})
+       	// 	 }else{
 			
-				this.$router.push("/")
-			 }
+		// 		this.$router.push("/")
+		// 	 }
+        // },
+		async checkSession() {
+			this.$axios.get("/sanctum/csrf-cookie").then((response) => {
+                this.$axios
+                    .get(`/api/getSession/`)
+                    .then((response) => {
+						let logueo=response.data.success;
+					   if (response.data.success) {
+            				// this.$router.push({name: 'dashboard'})
+       		 			}else{
+							this.$router.push("/")
+						}
+                    })
+                    .catch(function (error) {
+                        console.error(error);
+                    });
+            });
         },
-		async getModules() {
-			let session_information=window.localStorage.getItem("session_information");
-			session_information=JSON.parse(session_information);
-			let perfil=session_information.perfil_user;
-			
-			// let response = await axios.get(
-            //             "api/getModules/" + perfil
-            //         );
-			// console.log("saaaaaaaaaaaaaa");		
-			// console.log(response.data);		
-			
-			this.$axios.get('/sanctum/csrf-cookie').then(response => {
-					this.$axios.get(`/api/getModules/${perfil}`)
-						.then(response => {
-							this.modules=response.data.modules
-							console.log(response.data.modules)
-							
-						})
-						.catch(function (error) {
-							console.error(error);
-						});
-				})
-		},
-		clickNagbar(){
-			if(!this.state_navbar){
-				this.state_navbar=true;
-			}else{
-				this.state_navbar=false;
-			}
-		
+        async getModules() {
+            let session_information = window.localStorage.getItem(
+                "session_information"
+            );
+            session_information = JSON.parse(session_information);
+            let perfil = session_information.perfil_user;
 
-		},
+            this.$axios.get("/sanctum/csrf-cookie").then((response) => {
+                this.$axios
+                    .get(`/api/getModules/${perfil}`)
+                    .then((response) => {
+                        this.modules = response.data.modules;
+                       
+                    })
+                    .catch(function (error) {
+                        console.error(error);
+                    });
+            });
+        },
+        clickNagbar() {
+            if (!this.state_navbar) {
+                this.state_navbar = true;
+            } else {
+                this.state_navbar = false;
+            }
+        },
+        clickNav() {
+            if (!this.state_nav) {
+                this.state_nav = true;
+            } else {
+                this.state_nav = false;
+            }
+        },
         logout(e) {
-            e.preventDefault()
-            this.$axios.get('/sanctum/csrf-cookie').then(response => {
-                this.$axios.post('/api/logout')
-                    .then(response => {
+            e.preventDefault();
+            this.$axios.get("/sanctum/csrf-cookie").then((response) => {
+                this.$axios
+                    .post("/api/logout")
+                    .then((response) => {
                         if (response.data.success) {
-							window.localStorage.removeItem('logueo');
-							this.checkSession() 
+                            window.localStorage.removeItem("logueo");
+                            this.checkSession();
                         } else {
-                            console.log(response)
+                            console.log(response);
                         }
                     })
                     .catch(function (error) {
                         console.error(error);
                     });
-            })
-        }
+            });
+        },
     },
-}
+};
 </script>
+
+<style scoped>
+.nicescroll-bar {
+    overflow-x: hidden;
+}
+</style>

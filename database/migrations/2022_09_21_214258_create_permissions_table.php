@@ -19,10 +19,10 @@ class CreatePermissionsTable extends Migration
             $table->foreign('module_id')
             ->references('id')
             ->on('modules');
-            $table->bigInteger('perfil_id')->unsigned()->index();
-            $table->foreign('perfil_id')
+            $table->bigInteger('profile_id')->unsigned()->index();
+            $table->foreign('profile_id')
             ->references('id')
-            ->on('perfils');
+            ->on('profiles');
             $table->timestamps();
             $table->softDeletes();
 

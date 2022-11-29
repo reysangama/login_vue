@@ -32,7 +32,7 @@ class ModuleSeeder extends Seeder
         'created_at' => Carbon::now(),
         ],
         [ 'description'=>'Perfiles',
-        'url'=>'/perfil',
+        'url'=>'/profile',
         'parent_module'=>1,
         'icon'=>'pi pi-lock',
         'order'=>2,

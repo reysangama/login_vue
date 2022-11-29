@@ -18,12 +18,12 @@ class PermissionSeeder extends Seeder
         $data=[
             [
              'module_id'=>1,
-             'perfil_id'=>1,
+             'profile_id'=>1,
              'created_at' => Carbon::now(),
             ],
              [
                 'module_id'=>2,
-                'perfil_id'=>1,
+                'profile_id'=>1,
                 'created_at' => Carbon::now(),
                 ]
         ];

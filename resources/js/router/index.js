@@ -2,7 +2,9 @@ import {createWebHistory, createRouter} from "vue-router";
 
 import Home from '../pages/Home';
 import About from '../pages/About';
+//MANTENIMIENTO
 import User from '../pages/maintenance/User';
+import Profile from '../pages/maintenance/Profile';
 import Register from '../pages/Register';
 import Login from '../pages/Login';
 import Dashboard from '../pages/Dashboard';
@@ -35,9 +37,15 @@ export const routes = [
         children: [
             {
                 name: 'User',
-                path: '/User',
+                path: '/user',
                 component: User
             },
+            {
+                name: 'profile',
+                path: '/profile',
+                component: Profile
+                
+            }
         ]
     },
     {
