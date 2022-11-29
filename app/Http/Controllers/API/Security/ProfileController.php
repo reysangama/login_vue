@@ -37,7 +37,15 @@ class ProfileController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        try {
+            $profile = new Profile([
+                'description' => $request->description,
+            ]);
+            $profile->save();
+            return response()->json(['status' => true]);
+        } catch (\Throwable $th) {
+            return response()->json(['status' => false]);
+        }
     }
 
     /**

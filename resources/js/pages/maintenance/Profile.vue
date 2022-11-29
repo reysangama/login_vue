@@ -19,7 +19,7 @@
             <div class="panel panel-default card-view">
                 <div class="panel-heading">
                     <div class="pull-left">
-                        <button class="btn btn-success btn-icon left-icon" data-toggle="modal" data-target="#modal_perfil" data-whatever="@mdo"> <i class="fa fa-plus"></i> <span>Nuevo</span></button>
+                        <button class="btn btn-success btn-icon left-icon" data-toggle="modal" data-target="#modal_perfil" data-whatever="@mdo"  @click="cleanForm"> <i class="fa fa-plus"></i> <span>Nuevo</span></button>
                     </div>
                     <div class="clearfix"></div>
                 </div>
@@ -68,13 +68,13 @@
                         <form>
                             <div class="form-group">
                                 <label for="recipient-name" class="control-label mb-10">Perfil:</label>
-                                <input type="text" class="form-control" id="recipient-name1">
+                                <input type="text" class="form-control" v-model="form_profile.description">
                             </div>
                         </form>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-                        <button type="button" class="btn btn-primary">Registrar</button>
+                        <button type="button" class="btn btn-primary"  @click="registerProfile" >Registrar</button>
                     </div>
                 </div>
             </div>
@@ -111,9 +111,23 @@ methods: {
                     });
             });
         },
+        registerProfile() {
+            this.$axios.get('/sanctum/csrf-cookie').then(response => {
+                this.$axios.post('/api/profiles/', this.form_profile)
+                    .then(response => {
+                      console.log(response.data.status);
+                    })
+                    .catch(function (error) {
+                        console.error(error);
+                    });
+            })
+        },
 
         cleanForm(){
-
+            this.form_profile={
+                id: null,
+                description: null,
+            };
         }
 
 

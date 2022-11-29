@@ -12,5 +12,6 @@ class Profile extends Model
     use SoftDeletes;
     protected $table = 'profiles';
     protected $primaryKey = 'id';
+    protected $fillable = ['description'];
 }
 
