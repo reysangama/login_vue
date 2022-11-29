@@ -23255,7 +23255,7 @@ console.log("dashc");
     var _ref;
     return _ref = {
       state_navbar: false
-    }, _defineProperty(_ref, "state_navbar", true), _defineProperty(_ref, "state_mobile_nav", true), _defineProperty(_ref, "state_hover_navbar", false), _defineProperty(_ref, "name", null), _defineProperty(_ref, "modules", []), _defineProperty(_ref, "style_height", {
+    }, _defineProperty(_ref, "state_navbar", true), _defineProperty(_ref, "state_mobile_nav", true), _defineProperty(_ref, "state_hover_navbar", false), _defineProperty(_ref, "profile_id", false), _defineProperty(_ref, "name", null), _defineProperty(_ref, "modules", []), _defineProperty(_ref, "style_height", {
       // "max-height": "120% !important",
       "min-height": "661px !important"
     }), _ref;
@@ -23318,9 +23318,7 @@ console.log("dashc");
                 _this.$axios.get("/sanctum/csrf-cookie").then(function (response) {
                   _this.$axios.get("/api/getSession/").then(function (response) {
                     var logueo = response.data.success;
-                    if (response.data.success) {
-                      // this.$router.push({name: 'dashboard'})
-                    } else {
+                    if (response.data.success) {} else {
                       _this.$router.push("/");
                     }
                   })["catch"](function (error) {
@@ -23338,22 +23336,18 @@ console.log("dashc");
     getModules: function getModules() {
       var _this2 = this;
       return _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee2() {
-        var session_information, perfil;
         return _regeneratorRuntime().wrap(function _callee2$(_context2) {
           while (1) {
             switch (_context2.prev = _context2.next) {
               case 0:
-                session_information = window.localStorage.getItem("session_information");
-                session_information = JSON.parse(session_information);
-                perfil = session_information.perfil_user;
                 _this2.$axios.get("/sanctum/csrf-cookie").then(function (response) {
-                  _this2.$axios.get("/api/getModules/".concat(perfil)).then(function (response) {
+                  _this2.$axios.get("/api/getModules/").then(function (response) {
                     _this2.modules = response.data.modules;
                   })["catch"](function (error) {
                     console.error(error);
                   });
                 });
-              case 4:
+              case 1:
               case "end":
                 return _context2.stop();
             }
@@ -23438,7 +23432,6 @@ var __default__ = {
                 _this.$axios.get("/sanctum/csrf-cookie").then(function (response) {
                   _this.$axios.get("/api/getSession/").then(function (response) {
                     var logueo = response.data.success;
-                    console.log(logueo);
                     if (response.data.success) {
                       _this.$router.push({
                         name: 'dashboard'
@@ -23597,7 +23590,11 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
   name: "Perfil",
   data: function data() {
     return {
-      list_profile: []
+      list_profile: [],
+      form_profile: {
+        id: null,
+        description: null
+      }
     };
   },
   created: function created() {
@@ -23625,7 +23622,8 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
           }
         }, _callee);
       }))();
-    }
+    },
+    cleanForm: function cleanForm() {}
   }
 });
 
@@ -24950,35 +24948,27 @@ var _hoisted_13 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
 }, "×")]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h5", {
   "class": "modal-title",
   id: "exampleModalLabel1"
-}, "New message")]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+}, "Registrar Perfil")]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "modal-body"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("form", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "form-group"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
   "for": "recipient-name",
   "class": "control-label mb-10"
-}, "Recipient:"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+}, "Perfil:"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
   type: "text",
   "class": "form-control",
   id: "recipient-name1"
-})]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-  "class": "form-group"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
-  "for": "message-text",
-  "class": "control-label mb-10"
-}, "Message:"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("textarea", {
-  "class": "form-control",
-  id: "message-text1"
 })])])]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "modal-footer"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
   type: "button",
   "class": "btn btn-default",
   "data-dismiss": "modal"
-}, "Close"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+}, "Cerrar"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
   type: "button",
   "class": "btn btn-primary"
-}, "Send message")])])])], -1 /* HOISTED */);
+}, "Registrar")])])])], -1 /* HOISTED */);
 
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, [_hoisted_1, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Row "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [_hoisted_5, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_7, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_8, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_9, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("table", _hoisted_10, [_hoisted_11, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("tbody", null, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($data.list_profile, function (item, index) {

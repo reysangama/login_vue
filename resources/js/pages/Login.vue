@@ -102,7 +102,7 @@ export default {
                     .get(`/api/getSession/`)
                     .then((response) => {
 						let logueo=response.data.success;
-						console.log(logueo);
+					
 					   if (response.data.success) {
             				this.$router.push({name: 'dashboard'})
        		 			}else{
