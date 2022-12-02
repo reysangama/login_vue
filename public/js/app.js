@@ -23236,9 +23236,171 @@ __webpack_require__.r(__webpack_exports__);
 /*!**********************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/pages/Dashboard.vue?vue&type=script&lang=js ***!
   \**********************************************************************************************************************************************************************************************/
-/***/ (() => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: C:\\xampp\\htdocs\\login_vue\\resources\\js\\pages\\Dashboard.vue: Unexpected token (66:0)\n\n\u001b[0m \u001b[90m 64 |\u001b[39m        \t\t }\u001b[36melse\u001b[39m{\u001b[0m\n\u001b[0m \u001b[90m 65 |\u001b[39m \t\t\t\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 66 |\u001b[39m \u001b[33m<<\u001b[39m\u001b[33m<<\u001b[39m\u001b[33m<<\u001b[39m\u001b[33m<\u001b[39m \u001b[33mHEAD\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 67 |\u001b[39m \t\t\t\t\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39m$router\u001b[33m.\u001b[39mpush(\u001b[32m\"/\"\u001b[39m)\u001b[0m\n\u001b[0m \u001b[90m 68 |\u001b[39m \t\t\t }\u001b[0m\n\u001b[0m \u001b[90m 69 |\u001b[39m \u001b[33m===\u001b[39m\u001b[33m===\u001b[39m\u001b[33m=\u001b[39m\u001b[0m\n    at instantiate (C:\\xampp\\htdocs\\login_vue\\node_modules\\@babel\\parser\\lib\\index.js:72:32)\n    at constructor (C:\\xampp\\htdocs\\login_vue\\node_modules\\@babel\\parser\\lib\\index.js:367:12)\n    at Parser.raise (C:\\xampp\\htdocs\\login_vue\\node_modules\\@babel\\parser\\lib\\index.js:3706:19)\n    at Parser.unexpected (C:\\xampp\\htdocs\\login_vue\\node_modules\\@babel\\parser\\lib\\index.js:3744:16)\n    at Parser.parseExprAtom (C:\\xampp\\htdocs\\login_vue\\node_modules\\@babel\\parser\\lib\\index.js:13316:22)\n    at Parser.parseExprSubscripts (C:\\xampp\\htdocs\\login_vue\\node_modules\\@babel\\parser\\lib\\index.js:12842:23)\n    at Parser.parseUpdate (C:\\xampp\\htdocs\\login_vue\\node_modules\\@babel\\parser\\lib\\index.js:12822:21)\n    at Parser.parseMaybeUnary (C:\\xampp\\htdocs\\login_vue\\node_modules\\@babel\\parser\\lib\\index.js:12793:23)\n    at Parser.parseMaybeUnaryOrPrivate (C:\\xampp\\htdocs\\login_vue\\node_modules\\@babel\\parser\\lib\\index.js:12588:61)\n    at Parser.parseExprOps (C:\\xampp\\htdocs\\login_vue\\node_modules\\@babel\\parser\\lib\\index.js:12594:23)\n    at Parser.parseMaybeConditional (C:\\xampp\\htdocs\\login_vue\\node_modules\\@babel\\parser\\lib\\index.js:12565:23)\n    at Parser.parseMaybeAssign (C:\\xampp\\htdocs\\login_vue\\node_modules\\@babel\\parser\\lib\\index.js:12517:21)\n    at Parser.parseExpressionBase (C:\\xampp\\htdocs\\login_vue\\node_modules\\@babel\\parser\\lib\\index.js:12454:23)\n    at C:\\xampp\\htdocs\\login_vue\\node_modules\\@babel\\parser\\lib\\index.js:12449:39\n    at Parser.allowInAnd (C:\\xampp\\htdocs\\login_vue\\node_modules\\@babel\\parser\\lib\\index.js:14530:16)\n    at Parser.parseExpression (C:\\xampp\\htdocs\\login_vue\\node_modules\\@babel\\parser\\lib\\index.js:12449:17)\n    at Parser.parseStatementContent (C:\\xampp\\htdocs\\login_vue\\node_modules\\@babel\\parser\\lib\\index.js:14981:23)\n    at Parser.parseStatement (C:\\xampp\\htdocs\\login_vue\\node_modules\\@babel\\parser\\lib\\index.js:14838:17)\n    at Parser.parseBlockOrModuleBlockBody (C:\\xampp\\htdocs\\login_vue\\node_modules\\@babel\\parser\\lib\\index.js:15495:25)\n    at Parser.parseBlockBody (C:\\xampp\\htdocs\\login_vue\\node_modules\\@babel\\parser\\lib\\index.js:15486:10)\n    at Parser.parseBlock (C:\\xampp\\htdocs\\login_vue\\node_modules\\@babel\\parser\\lib\\index.js:15470:10)\n    at Parser.parseStatementContent (C:\\xampp\\htdocs\\login_vue\\node_modules\\@babel\\parser\\lib\\index.js:14922:21)\n    at Parser.parseStatement (C:\\xampp\\htdocs\\login_vue\\node_modules\\@babel\\parser\\lib\\index.js:14838:17)\n    at Parser.parseIfStatement (C:\\xampp\\htdocs\\login_vue\\node_modules\\@babel\\parser\\lib\\index.js:15251:42)\n    at Parser.parseStatementContent (C:\\xampp\\htdocs\\login_vue\\node_modules\\@babel\\parser\\lib\\index.js:14889:21)\n    at Parser.parseStatement (C:\\xampp\\htdocs\\login_vue\\node_modules\\@babel\\parser\\lib\\index.js:14838:17)\n    at Parser.parseBlockOrModuleBlockBody (C:\\xampp\\htdocs\\login_vue\\node_modules\\@babel\\parser\\lib\\index.js:15495:25)\n    at Parser.parseBlockBody (C:\\xampp\\htdocs\\login_vue\\node_modules\\@babel\\parser\\lib\\index.js:15486:10)\n    at Parser.parseBlock (C:\\xampp\\htdocs\\login_vue\\node_modules\\@babel\\parser\\lib\\index.js:15470:10)\n    at Parser.parseFunctionBody (C:\\xampp\\htdocs\\login_vue\\node_modules\\@babel\\parser\\lib\\index.js:14136:24)\n    at Parser.parseFunctionBodyAndFinish (C:\\xampp\\htdocs\\login_vue\\node_modules\\@babel\\parser\\lib\\index.js:14120:10)\n    at Parser.parseMethod (C:\\xampp\\htdocs\\login_vue\\node_modules\\@babel\\parser\\lib\\index.js:14069:31)\n    at Parser.parseObjectMethod (C:\\xampp\\htdocs\\login_vue\\node_modules\\@babel\\parser\\lib\\index.js:13945:19)\n    at Parser.parseObjPropValue (C:\\xampp\\htdocs\\login_vue\\node_modules\\@babel\\parser\\lib\\index.js:13986:23)\n    at Parser.parsePropertyDefinition (C:\\xampp\\htdocs\\login_vue\\node_modules\\@babel\\parser\\lib\\index.js:13904:17)\n    at Parser.parseObjectLike (C:\\xampp\\htdocs\\login_vue\\node_modules\\@babel\\parser\\lib\\index.js:13796:21)\n    at Parser.parseExprAtom (C:\\xampp\\htdocs\\login_vue\\node_modules\\@babel\\parser\\lib\\index.js:13191:23)\n    at Parser.parseExprSubscripts (C:\\xampp\\htdocs\\login_vue\\node_modules\\@babel\\parser\\lib\\index.js:12842:23)\n    at Parser.parseUpdate (C:\\xampp\\htdocs\\login_vue\\node_modules\\@babel\\parser\\lib\\index.js:12822:21)\n    at Parser.parseMaybeUnary (C:\\xampp\\htdocs\\login_vue\\node_modules\\@babel\\parser\\lib\\index.js:12793:23)\n    at Parser.parseMaybeUnaryOrPrivate (C:\\xampp\\htdocs\\login_vue\\node_modules\\@babel\\parser\\lib\\index.js:12588:61)\n    at Parser.parseExprOps (C:\\xampp\\htdocs\\login_vue\\node_modules\\@babel\\parser\\lib\\index.js:12594:23)\n    at Parser.parseMaybeConditional (C:\\xampp\\htdocs\\login_vue\\node_modules\\@babel\\parser\\lib\\index.js:12565:23)\n    at Parser.parseMaybeAssign (C:\\xampp\\htdocs\\login_vue\\node_modules\\@babel\\parser\\lib\\index.js:12517:21)\n    at C:\\xampp\\htdocs\\login_vue\\node_modules\\@babel\\parser\\lib\\index.js:12476:39\n    at Parser.allowInAnd (C:\\xampp\\htdocs\\login_vue\\node_modules\\@babel\\parser\\lib\\index.js:14536:12)\n    at Parser.parseMaybeAssignAllowIn (C:\\xampp\\htdocs\\login_vue\\node_modules\\@babel\\parser\\lib\\index.js:12476:17)\n    at Parser.parseObjectProperty (C:\\xampp\\htdocs\\login_vue\\node_modules\\@babel\\parser\\lib\\index.js:13953:83)\n    at Parser.parseObjPropValue (C:\\xampp\\htdocs\\login_vue\\node_modules\\@babel\\parser\\lib\\index.js:13986:100)\n    at Parser.parsePropertyDefinition (C:\\xampp\\htdocs\\login_vue\\node_modules\\@babel\\parser\\lib\\index.js:13904:17)");
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var vue_loading_overlay__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue-loading-overlay */ "./node_modules/vue-loading-overlay/dist/index.js");
+/* harmony import */ var vue_loading_overlay__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue_loading_overlay__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var vue_loading_overlay_dist_css_index_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue-loading-overlay/dist/css/index.css */ "./node_modules/vue-loading-overlay/dist/css/index.css");
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+function _regeneratorRuntime() { "use strict"; /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/facebook/regenerator/blob/main/LICENSE */ _regeneratorRuntime = function _regeneratorRuntime() { return exports; }; var exports = {}, Op = Object.prototype, hasOwn = Op.hasOwnProperty, $Symbol = "function" == typeof Symbol ? Symbol : {}, iteratorSymbol = $Symbol.iterator || "@@iterator", asyncIteratorSymbol = $Symbol.asyncIterator || "@@asyncIterator", toStringTagSymbol = $Symbol.toStringTag || "@@toStringTag"; function define(obj, key, value) { return Object.defineProperty(obj, key, { value: value, enumerable: !0, configurable: !0, writable: !0 }), obj[key]; } try { define({}, ""); } catch (err) { define = function define(obj, key, value) { return obj[key] = value; }; } function wrap(innerFn, outerFn, self, tryLocsList) { var protoGenerator = outerFn && outerFn.prototype instanceof Generator ? outerFn : Generator, generator = Object.create(protoGenerator.prototype), context = new Context(tryLocsList || []); return generator._invoke = function (innerFn, self, context) { var state = "suspendedStart"; return function (method, arg) { if ("executing" === state) throw new Error("Generator is already running"); if ("completed" === state) { if ("throw" === method) throw arg; return doneResult(); } for (context.method = method, context.arg = arg;;) { var delegate = context.delegate; if (delegate) { var delegateResult = maybeInvokeDelegate(delegate, context); if (delegateResult) { if (delegateResult === ContinueSentinel) continue; return delegateResult; } } if ("next" === context.method) context.sent = context._sent = context.arg;else if ("throw" === context.method) { if ("suspendedStart" === state) throw state = "completed", context.arg; context.dispatchException(context.arg); } else "return" === context.method && context.abrupt("return", context.arg); state = "executing"; var record = tryCatch(innerFn, self, context); if ("normal" === record.type) { if (state = context.done ? "completed" : "suspendedYield", record.arg === ContinueSentinel) continue; return { value: record.arg, done: context.done }; } "throw" === record.type && (state = "completed", context.method = "throw", context.arg = record.arg); } }; }(innerFn, self, context), generator; } function tryCatch(fn, obj, arg) { try { return { type: "normal", arg: fn.call(obj, arg) }; } catch (err) { return { type: "throw", arg: err }; } } exports.wrap = wrap; var ContinueSentinel = {}; function Generator() {} function GeneratorFunction() {} function GeneratorFunctionPrototype() {} var IteratorPrototype = {}; define(IteratorPrototype, iteratorSymbol, function () { return this; }); var getProto = Object.getPrototypeOf, NativeIteratorPrototype = getProto && getProto(getProto(values([]))); NativeIteratorPrototype && NativeIteratorPrototype !== Op && hasOwn.call(NativeIteratorPrototype, iteratorSymbol) && (IteratorPrototype = NativeIteratorPrototype); var Gp = GeneratorFunctionPrototype.prototype = Generator.prototype = Object.create(IteratorPrototype); function defineIteratorMethods(prototype) { ["next", "throw", "return"].forEach(function (method) { define(prototype, method, function (arg) { return this._invoke(method, arg); }); }); } function AsyncIterator(generator, PromiseImpl) { function invoke(method, arg, resolve, reject) { var record = tryCatch(generator[method], generator, arg); if ("throw" !== record.type) { var result = record.arg, value = result.value; return value && "object" == _typeof(value) && hasOwn.call(value, "__await") ? PromiseImpl.resolve(value.__await).then(function (value) { invoke("next", value, resolve, reject); }, function (err) { invoke("throw", err, resolve, reject); }) : PromiseImpl.resolve(value).then(function (unwrapped) { result.value = unwrapped, resolve(result); }, function (error) { return invoke("throw", error, resolve, reject); }); } reject(record.arg); } var previousPromise; this._invoke = function (method, arg) { function callInvokeWithMethodAndArg() { return new PromiseImpl(function (resolve, reject) { invoke(method, arg, resolve, reject); }); } return previousPromise = previousPromise ? previousPromise.then(callInvokeWithMethodAndArg, callInvokeWithMethodAndArg) : callInvokeWithMethodAndArg(); }; } function maybeInvokeDelegate(delegate, context) { var method = delegate.iterator[context.method]; if (undefined === method) { if (context.delegate = null, "throw" === context.method) { if (delegate.iterator["return"] && (context.method = "return", context.arg = undefined, maybeInvokeDelegate(delegate, context), "throw" === context.method)) return ContinueSentinel; context.method = "throw", context.arg = new TypeError("The iterator does not provide a 'throw' method"); } return ContinueSentinel; } var record = tryCatch(method, delegate.iterator, context.arg); if ("throw" === record.type) return context.method = "throw", context.arg = record.arg, context.delegate = null, ContinueSentinel; var info = record.arg; return info ? info.done ? (context[delegate.resultName] = info.value, context.next = delegate.nextLoc, "return" !== context.method && (context.method = "next", context.arg = undefined), context.delegate = null, ContinueSentinel) : info : (context.method = "throw", context.arg = new TypeError("iterator result is not an object"), context.delegate = null, ContinueSentinel); } function pushTryEntry(locs) { var entry = { tryLoc: locs[0] }; 1 in locs && (entry.catchLoc = locs[1]), 2 in locs && (entry.finallyLoc = locs[2], entry.afterLoc = locs[3]), this.tryEntries.push(entry); } function resetTryEntry(entry) { var record = entry.completion || {}; record.type = "normal", delete record.arg, entry.completion = record; } function Context(tryLocsList) { this.tryEntries = [{ tryLoc: "root" }], tryLocsList.forEach(pushTryEntry, this), this.reset(!0); } function values(iterable) { if (iterable) { var iteratorMethod = iterable[iteratorSymbol]; if (iteratorMethod) return iteratorMethod.call(iterable); if ("function" == typeof iterable.next) return iterable; if (!isNaN(iterable.length)) { var i = -1, next = function next() { for (; ++i < iterable.length;) { if (hasOwn.call(iterable, i)) return next.value = iterable[i], next.done = !1, next; } return next.value = undefined, next.done = !0, next; }; return next.next = next; } } return { next: doneResult }; } function doneResult() { return { value: undefined, done: !0 }; } return GeneratorFunction.prototype = GeneratorFunctionPrototype, define(Gp, "constructor", GeneratorFunctionPrototype), define(GeneratorFunctionPrototype, "constructor", GeneratorFunction), GeneratorFunction.displayName = define(GeneratorFunctionPrototype, toStringTagSymbol, "GeneratorFunction"), exports.isGeneratorFunction = function (genFun) { var ctor = "function" == typeof genFun && genFun.constructor; return !!ctor && (ctor === GeneratorFunction || "GeneratorFunction" === (ctor.displayName || ctor.name)); }, exports.mark = function (genFun) { return Object.setPrototypeOf ? Object.setPrototypeOf(genFun, GeneratorFunctionPrototype) : (genFun.__proto__ = GeneratorFunctionPrototype, define(genFun, toStringTagSymbol, "GeneratorFunction")), genFun.prototype = Object.create(Gp), genFun; }, exports.awrap = function (arg) { return { __await: arg }; }, defineIteratorMethods(AsyncIterator.prototype), define(AsyncIterator.prototype, asyncIteratorSymbol, function () { return this; }), exports.AsyncIterator = AsyncIterator, exports.async = function (innerFn, outerFn, self, tryLocsList, PromiseImpl) { void 0 === PromiseImpl && (PromiseImpl = Promise); var iter = new AsyncIterator(wrap(innerFn, outerFn, self, tryLocsList), PromiseImpl); return exports.isGeneratorFunction(outerFn) ? iter : iter.next().then(function (result) { return result.done ? result.value : iter.next(); }); }, defineIteratorMethods(Gp), define(Gp, toStringTagSymbol, "Generator"), define(Gp, iteratorSymbol, function () { return this; }), define(Gp, "toString", function () { return "[object Generator]"; }), exports.keys = function (object) { var keys = []; for (var key in object) { keys.push(key); } return keys.reverse(), function next() { for (; keys.length;) { var key = keys.pop(); if (key in object) return next.value = key, next.done = !1, next; } return next.done = !0, next; }; }, exports.values = values, Context.prototype = { constructor: Context, reset: function reset(skipTempReset) { if (this.prev = 0, this.next = 0, this.sent = this._sent = undefined, this.done = !1, this.delegate = null, this.method = "next", this.arg = undefined, this.tryEntries.forEach(resetTryEntry), !skipTempReset) for (var name in this) { "t" === name.charAt(0) && hasOwn.call(this, name) && !isNaN(+name.slice(1)) && (this[name] = undefined); } }, stop: function stop() { this.done = !0; var rootRecord = this.tryEntries[0].completion; if ("throw" === rootRecord.type) throw rootRecord.arg; return this.rval; }, dispatchException: function dispatchException(exception) { if (this.done) throw exception; var context = this; function handle(loc, caught) { return record.type = "throw", record.arg = exception, context.next = loc, caught && (context.method = "next", context.arg = undefined), !!caught; } for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i], record = entry.completion; if ("root" === entry.tryLoc) return handle("end"); if (entry.tryLoc <= this.prev) { var hasCatch = hasOwn.call(entry, "catchLoc"), hasFinally = hasOwn.call(entry, "finallyLoc"); if (hasCatch && hasFinally) { if (this.prev < entry.catchLoc) return handle(entry.catchLoc, !0); if (this.prev < entry.finallyLoc) return handle(entry.finallyLoc); } else if (hasCatch) { if (this.prev < entry.catchLoc) return handle(entry.catchLoc, !0); } else { if (!hasFinally) throw new Error("try statement without catch or finally"); if (this.prev < entry.finallyLoc) return handle(entry.finallyLoc); } } } }, abrupt: function abrupt(type, arg) { for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i]; if (entry.tryLoc <= this.prev && hasOwn.call(entry, "finallyLoc") && this.prev < entry.finallyLoc) { var finallyEntry = entry; break; } } finallyEntry && ("break" === type || "continue" === type) && finallyEntry.tryLoc <= arg && arg <= finallyEntry.finallyLoc && (finallyEntry = null); var record = finallyEntry ? finallyEntry.completion : {}; return record.type = type, record.arg = arg, finallyEntry ? (this.method = "next", this.next = finallyEntry.finallyLoc, ContinueSentinel) : this.complete(record); }, complete: function complete(record, afterLoc) { if ("throw" === record.type) throw record.arg; return "break" === record.type || "continue" === record.type ? this.next = record.arg : "return" === record.type ? (this.rval = this.arg = record.arg, this.method = "return", this.next = "end") : "normal" === record.type && afterLoc && (this.next = afterLoc), ContinueSentinel; }, finish: function finish(finallyLoc) { for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i]; if (entry.finallyLoc === finallyLoc) return this.complete(entry.completion, entry.afterLoc), resetTryEntry(entry), ContinueSentinel; } }, "catch": function _catch(tryLoc) { for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i]; if (entry.tryLoc === tryLoc) { var record = entry.completion; if ("throw" === record.type) { var thrown = record.arg; resetTryEntry(entry); } return thrown; } } throw new Error("illegal catch attempt"); }, delegateYield: function delegateYield(iterable, resultName, nextLoc) { return this.delegate = { iterator: values(iterable), resultName: resultName, nextLoc: nextLoc }, "next" === this.method && (this.arg = undefined), ContinueSentinel; } }, exports; }
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+// -------------
+console.log("dashc");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  components: {
+    Loading: (vue_loading_overlay__WEBPACK_IMPORTED_MODULE_0___default())
+  },
+  name: "Dashboard",
+  data: function data() {
+    var _ref;
+    return _ref = {
+      isLoading: true,
+      fullPage: true,
+      // 
+      state_navbar: false
+    }, _defineProperty(_ref, "state_navbar", true), _defineProperty(_ref, "state_mobile_nav", true), _defineProperty(_ref, "state_hover_navbar", false), _defineProperty(_ref, "profile_id", false), _defineProperty(_ref, "name", null), _defineProperty(_ref, "modules", []), _defineProperty(_ref, "style_height", {
+      // "max-height": "120% !important",
+      "min-height": "661px !important"
+    }), _ref;
+  },
+  created: function created() {
+    this.clickNagbar();
+    this.clickNav();
+    this.checkSession();
+    this.getModules();
+    this.addStyleWrapper();
+    // this.checkSession2();
+  },
+
+  // created() {
+  //     if (window.Laravel.user) {
+  //         this.name = window.Laravel.user.name
+  //     }
+  // },
+  // beforeRouteEnter(to, from, next) {
+  //     if (!window.Laravel.isLoggedin) {
+  // 		this.$router.push({name: 'login'})
+  //     }
+  //     next();
+  // },
+  methods: {
+    clickMovileNav: function clickMovileNav() {
+      if (!this.state_mobile_nav) {
+        this.state_mobile_nav = true;
+      } else {
+        this.state_mobile_nav = false;
+      }
+    },
+    leaveNav: function leaveNav() {
+      this.state_hover_navbar = false;
+    },
+    hoverNav: function hoverNav() {
+      this.state_hover_navbar = true;
+    },
+    addStyleWrapper: function addStyleWrapper() {
+      var height_now = window.innerHeight + "px";
+      this.style_height = {
+        "min-height": height_now + " !important"
+      };
+    },
+    //  checkSession() {
+    // 	let logueo=window.localStorage.getItem("logueo");
+    //     if (logueo) {
+    //     	this.$router.push({name: 'dashboard'})
+    // 	 }else{
+    // 		this.$router.push("/")
+    // 	 }
+    // },
+    checkSession: function checkSession() {
+      var _this = this;
+      return _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee() {
+        return _regeneratorRuntime().wrap(function _callee$(_context) {
+          while (1) {
+            switch (_context.prev = _context.next) {
+              case 0:
+                _this.$axios.get("/sanctum/csrf-cookie").then(function (response) {
+                  _this.$axios.get("/api/getSession/").then(function (response) {
+                    var logueo = response.data.success;
+                    if (response.data.success) {} else {
+                      _this.$router.push("/");
+                    }
+                  })["catch"](function (error) {
+                    console.error(error);
+                  });
+                });
+              case 1:
+              case "end":
+                return _context.stop();
+            }
+          }
+        }, _callee);
+      }))();
+    },
+    getModules: function getModules() {
+      var _this2 = this;
+      return _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee2() {
+        return _regeneratorRuntime().wrap(function _callee2$(_context2) {
+          while (1) {
+            switch (_context2.prev = _context2.next) {
+              case 0:
+                _this2.$axios.get("/sanctum/csrf-cookie").then(function (response) {
+                  _this2.$axios.get("/api/getModules/").then(function (response) {
+                    _this2.modules = response.data.modules;
+                    _this2.isLoading = false;
+                  })["catch"](function (error) {
+                    console.error(error);
+                  });
+                });
+              case 1:
+              case "end":
+                return _context2.stop();
+            }
+          }
+        }, _callee2);
+      }))();
+    },
+    clickNagbar: function clickNagbar() {
+      if (!this.state_navbar) {
+        this.state_navbar = true;
+      } else {
+        this.state_navbar = false;
+      }
+    },
+    clickNav: function clickNav() {
+      if (!this.state_nav) {
+        this.state_nav = true;
+      } else {
+        this.state_nav = false;
+      }
+    },
+    logout: function logout(e) {
+      var _this3 = this;
+      e.preventDefault();
+      this.$axios.get("/sanctum/csrf-cookie").then(function (response) {
+        _this3.$axios.post("/api/logout").then(function (response) {
+          if (response.data.success) {
+            window.localStorage.removeItem("logueo");
+            _this3.checkSession();
+          } else {
+            console.log(response);
+          }
+        })["catch"](function (error) {
+          console.error(error);
+        });
+      });
+    }
+  }
+});
 
 /***/ }),
 
@@ -24329,43 +24491,53 @@ var _hoisted_39 = /*#__PURE__*/_withScopeId(function () {
   }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", null, "2017 © Philbert. Pampered by Hencework")])])], -1 /* HOISTED */);
 });
 
-function render(_ctx, _cache) {
+function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _ref;
+  var _component_loading = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("loading");
   var _component_router_link = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("router-link");
   var _component_router_view = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("router-view");
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", {
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_loading, {
+    active: $data.isLoading,
+    "onUpdate:active": _cache[0] || (_cache[0] = function ($event) {
+      return $data.isLoading = $event;
+    }),
+    "can-cancel": false,
+    "is-full-page": true,
+    speed: "2",
+    color1: "#ffffff"
+  }, null, 8 /* PROPS */, ["active"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
     "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)(["wrapper theme-1-active pimary-color-green", (_ref = {
-      ' slide-nav-toggle': _ctx.state_navbar,
-      '': !_ctx.state_navbar,
-      'sidebar-hover': _ctx.state_hover_navbar
-    }, _defineProperty(_ref, "", !_ctx.state_hover_navbar), _defineProperty(_ref, 'mobile-nav-open', _ctx.state_mobile_nav), _defineProperty(_ref, "", !_ctx.state_mobile_nav), _ref)])
+      ' slide-nav-toggle': $data.state_navbar,
+      '': !$data.state_navbar,
+      'sidebar-hover': $data.state_hover_navbar
+    }, _defineProperty(_ref, "", !$data.state_hover_navbar), _defineProperty(_ref, 'mobile-nav-open', $data.state_mobile_nav), _defineProperty(_ref, "", !$data.state_mobile_nav), _ref)])
   }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Top Menu Items "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("nav", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [_hoisted_3, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
     "class": "toggle-left-nav-btn inline-block ml-20 pull-left",
-    onClick: _cache[0] || (_cache[0] = function () {
-      return _ctx.clickNagbar && _ctx.clickNagbar.apply(_ctx, arguments);
+    onClick: _cache[1] || (_cache[1] = function () {
+      return $options.clickNagbar && $options.clickNagbar.apply($options, arguments);
     }),
     href: "#"
   }, _hoisted_5), _hoisted_6, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
     id: "toggle_mobile_nav",
-    onClick: _cache[1] || (_cache[1] = function () {
-      return _ctx.clickMovileNav && _ctx.clickMovileNav.apply(_ctx, arguments);
+    onClick: _cache[2] || (_cache[2] = function () {
+      return $options.clickMovileNav && $options.clickMovileNav.apply($options, arguments);
     }),
     "class": "mobile-only-view",
     href: "javascript:void(0);"
   }, _hoisted_8), _hoisted_9]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_10, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("ul", _hoisted_11, [_hoisted_12, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", _hoisted_15, [_hoisted_16, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("ul", _hoisted_17, [_hoisted_18, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
-    onClick: _cache[2] || (_cache[2] = function () {
-      return _ctx.logout && _ctx.logout.apply(_ctx, arguments);
+    onClick: _cache[3] || (_cache[3] = function () {
+      return $options.logout && $options.logout.apply($options, arguments);
     }),
     href: "#"
   }, _hoisted_27)])])])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" /Top Menu Items "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Left Sidebar Menu "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_28, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("ul", {
     "class": "nav navbar-nav side-nav nicescroll-bar",
-    onMouseover: _cache[3] || (_cache[3] = function () {
-      return _ctx.hoverNav && _ctx.hoverNav.apply(_ctx, arguments);
+    onMouseover: _cache[4] || (_cache[4] = function () {
+      return $options.hoverNav && $options.hoverNav.apply($options, arguments);
     }),
-    onMouseleave: _cache[4] || (_cache[4] = function () {
-      return _ctx.leaveNav && _ctx.leaveNav.apply(_ctx, arguments);
+    onMouseleave: _cache[5] || (_cache[5] = function () {
+      return $options.leaveNav && $options.leaveNav.apply($options, arguments);
     })
-  }, [_hoisted_29, ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)(_ctx.modules, function (module, index) {
+  }, [_hoisted_29, ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($data.modules, function (module, index) {
     return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("li", {
       key: module.module_id
     }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
@@ -24392,8 +24564,8 @@ function render(_ctx, _cache) {
     }), 128 /* KEYED_FRAGMENT */))], 8 /* PROPS */, _hoisted_35)]);
   }), 128 /* KEYED_FRAGMENT */))], 32 /* HYDRATE_EVENTS */)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" /Left Sidebar Menu "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Right Sidebar Menu "), _hoisted_36, _hoisted_37, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" /Right Sidebar Backdrop "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Main Content "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
     "class": "page-wrapper",
-    style: (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeStyle)(_ctx.style_height)
-  }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_38, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_view)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Footer "), _hoisted_39, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" /Footer ")], 4 /* STYLE */), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" /Main Content ")], 2 /* CLASS */);
+    style: (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeStyle)($data.style_height)
+  }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_38, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_view)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Footer "), _hoisted_39, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" /Footer ")], 4 /* STYLE */), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" /Main Content ")], 2 /* CLASS */)], 64 /* STABLE_FRAGMENT */);
 }
 
 /***/ }),
@@ -30268,6 +30440,30 @@ defineJQueryPlugin(Toast);
 
 /***/ }),
 
+/***/ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!./node_modules/vue-loading-overlay/dist/css/index.css":
+/*!*********************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!./node_modules/vue-loading-overlay/dist/css/index.css ***!
+  \*********************************************************************************************************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+// Imports
+
+var ___CSS_LOADER_EXPORT___ = _css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, ".vl-shown {\n  overflow: hidden;\n}\n\n.vl-overlay {\n  bottom: 0;\n  left: 0;\n  position: absolute;\n  right: 0;\n  top: 0;\n  align-items: center;\n  display: none;\n  justify-content: center;\n  overflow: hidden;\n  z-index: 9999;\n}\n\n.vl-overlay.vl-active {\n  display: flex;\n}\n\n.vl-overlay.vl-full-page {\n  z-index: 9999;\n  position: fixed;\n}\n\n.vl-overlay .vl-background {\n  bottom: 0;\n  left: 0;\n  position: absolute;\n  right: 0;\n  top: 0;\n  background: #fff;\n  opacity: 0.5;\n}\n\n.vl-overlay .vl-icon, .vl-parent {\n  position: relative;\n}\n\n", ""]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/pages/Dashboard.vue?vue&type=style&index=0&id=82704d4a&scoped=true&lang=css":
 /*!***********************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/pages/Dashboard.vue?vue&type=style&index=0&id=82704d4a&scoped=true&lang=css ***!
@@ -30285,7 +30481,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.nicescroll-bar[data-v-82704d4a] {\r\n    overflow-x: hidden;\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.nicescroll-bar[data-v-82704d4a] {\r\n\toverflow-x: hidden;\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -47835,6 +48031,36 @@ process.umask = function() { return 0; };
 
 /***/ }),
 
+/***/ "./node_modules/vue-loading-overlay/dist/css/index.css":
+/*!*************************************************************!*\
+  !*** ./node_modules/vue-loading-overlay/dist/css/index.css ***!
+  \*************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _css_loader_dist_cjs_js_clonedRuleSet_9_use_1_postcss_loader_dist_cjs_js_clonedRuleSet_9_use_2_index_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!../../../postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!./index.css */ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!./node_modules/vue-loading-overlay/dist/css/index.css");
+
+            
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = _style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_css_loader_dist_cjs_js_clonedRuleSet_9_use_1_postcss_loader_dist_cjs_js_clonedRuleSet_9_use_2_index_css__WEBPACK_IMPORTED_MODULE_1__["default"], options);
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_css_loader_dist_cjs_js_clonedRuleSet_9_use_1_postcss_loader_dist_cjs_js_clonedRuleSet_9_use_2_index_css__WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
+
+/***/ }),
+
 /***/ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/pages/Dashboard.vue?vue&type=style&index=0&id=82704d4a&scoped=true&lang=css":
 /*!***************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/pages/Dashboard.vue?vue&type=style&index=0&id=82704d4a&scoped=true&lang=css ***!
@@ -48920,6 +49146,584 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_style_loader_dist_cjs_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_use_1_node_modules_vue_loader_dist_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_use_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_Register_vue_vue_type_style_index_0_id_364a2fac_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/style-loader/dist/cjs.js!../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!../../../node_modules/vue-loader/dist/stylePostLoader.js!../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./Register.vue?vue&type=style&index=0&id=364a2fac&scoped=true&lang=css */ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/pages/Register.vue?vue&type=style&index=0&id=364a2fac&scoped=true&lang=css");
 
+
+/***/ }),
+
+/***/ "./node_modules/vue-loading-overlay/dist/index.js":
+/*!********************************************************!*\
+  !*** ./node_modules/vue-loading-overlay/dist/index.js ***!
+  \********************************************************/
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+
+(function webpackUniversalModuleDefinition(root, factory) {
+	if(true)
+		module.exports = factory(__webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js"));
+	else {}
+})(this, (__WEBPACK_EXTERNAL_MODULE__976__) => {
+return /******/ (() => { // webpackBootstrap
+/******/ 	"use strict";
+/******/ 	var __webpack_modules__ = ({
+
+/***/ 935:
+/***/ ((__unused_webpack_module, exports) => {
+
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+// runtime helper for setting properties on components
+// in a tree-shakable way
+exports["default"] = (sfc, props) => {
+    const target = sfc.__vccOpts || sfc;
+    for (const [key, val] of props) {
+        target[key] = val;
+    }
+    return target;
+};
+
+
+/***/ }),
+
+/***/ 976:
+/***/ ((module) => {
+
+module.exports = __WEBPACK_EXTERNAL_MODULE__976__;
+
+/***/ })
+
+/******/ 	});
+/************************************************************************/
+/******/ 	// The module cache
+/******/ 	var __webpack_module_cache__ = {};
+/******/ 	
+/******/ 	// The require function
+/******/ 	function __nested_webpack_require_1266__(moduleId) {
+/******/ 		// Check if module is in cache
+/******/ 		var cachedModule = __webpack_module_cache__[moduleId];
+/******/ 		if (cachedModule !== undefined) {
+/******/ 			return cachedModule.exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = __webpack_module_cache__[moduleId] = {
+/******/ 			// no module.id needed
+/******/ 			// no module.loaded needed
+/******/ 			exports: {}
+/******/ 		};
+/******/ 	
+/******/ 		// Execute the module function
+/******/ 		__webpack_modules__[moduleId](module, module.exports, __nested_webpack_require_1266__);
+/******/ 	
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/ 	
+/************************************************************************/
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	(() => {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__nested_webpack_require_1266__.d = (exports, definition) => {
+/******/ 			for(var key in definition) {
+/******/ 				if(__nested_webpack_require_1266__.o(definition, key) && !__nested_webpack_require_1266__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	(() => {
+/******/ 		__nested_webpack_require_1266__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/make namespace object */
+/******/ 	(() => {
+/******/ 		// define __esModule on exports
+/******/ 		__nested_webpack_require_1266__.r = (exports) => {
+/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 			}
+/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/************************************************************************/
+var __webpack_exports__ = {};
+// This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
+(() => {
+// ESM COMPAT FLAG
+__nested_webpack_require_1266__.r(__webpack_exports__);
+
+// EXPORTS
+__nested_webpack_require_1266__.d(__webpack_exports__, {
+  "Component": () => (/* reexport */ Component),
+  "LoadingPlugin": () => (/* binding */ LoadingPlugin),
+  "default": () => (/* binding */ src),
+  "useLoading": () => (/* reexport */ useLoading)
+});
+
+// EXTERNAL MODULE: external {"commonjs":"vue","commonjs2":"vue","amd":"vue","root":"Vue"}
+var external_commonjs_vue_commonjs2_vue_amd_vue_root_Vue_ = __nested_webpack_require_1266__(976);
+;// CONCATENATED MODULE: ./src/js/helpers.js
+
+function removeElement(el) {
+  if (typeof el.remove !== 'undefined') {
+    el.remove();
+  } else {
+    var _el$parentNode;
+
+    (_el$parentNode = el.parentNode) === null || _el$parentNode === void 0 ? void 0 : _el$parentNode.removeChild(el);
+  }
+} // Taken from https://github.com/moyoujun/vue3-loading-overlay/blob/master/src/index.ts
+
+function createComponent(component, props, parentContainer) {
+  let slots = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : {};
+  const vNode = (0,external_commonjs_vue_commonjs2_vue_amd_vue_root_Vue_.h)(component, props, slots);
+  const container = document.createElement('div');
+  container.classList.add('vld-container');
+  parentContainer.appendChild(container);
+  (0,external_commonjs_vue_commonjs2_vue_amd_vue_root_Vue_.render)(vNode, container);
+  return vNode.component;
+}
+function hasWindow() {
+  return typeof window !== 'undefined';
+}
+const MayBeHTMLElement = hasWindow() ? window.HTMLElement : Object;
+;// CONCATENATED MODULE: ./node_modules/.pnpm/babel-loader@8.2.5_rhsdbzevgb5tizdhlla5jsbgyu/node_modules/babel-loader/lib/index.js!./node_modules/.pnpm/vue-loader@17.0.0_webpack@5.74.0/node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/.pnpm/vue-loader@17.0.0_webpack@5.74.0/node_modules/vue-loader/dist/index.js??ruleSet[1].rules[5].use[0]!./src/js/Component.vue?vue&type=template&id=fdbca6ec
+
+const _hoisted_1 = ["aria-busy"];
+const _hoisted_2 = {
+  class: "vl-icon"
+};
+function render(_ctx, _cache, $props, $setup, $data, $options) {
+  return (0,external_commonjs_vue_commonjs2_vue_amd_vue_root_Vue_.openBlock)(), (0,external_commonjs_vue_commonjs2_vue_amd_vue_root_Vue_.createBlock)(external_commonjs_vue_commonjs2_vue_amd_vue_root_Vue_.Transition, {
+    name: _ctx.transition
+  }, {
+    default: (0,external_commonjs_vue_commonjs2_vue_amd_vue_root_Vue_.withCtx)(() => [(0,external_commonjs_vue_commonjs2_vue_amd_vue_root_Vue_.withDirectives)((0,external_commonjs_vue_commonjs2_vue_amd_vue_root_Vue_.createElementVNode)("div", {
+      tabindex: "0",
+      class: (0,external_commonjs_vue_commonjs2_vue_amd_vue_root_Vue_.normalizeClass)(["vl-overlay vl-active", {
+        'vl-full-page': _ctx.isFullPage
+      }]),
+      "aria-busy": _ctx.isActive,
+      "aria-label": "Loading",
+      style: (0,external_commonjs_vue_commonjs2_vue_amd_vue_root_Vue_.normalizeStyle)({
+        zIndex: _ctx.zIndex
+      })
+    }, [(0,external_commonjs_vue_commonjs2_vue_amd_vue_root_Vue_.createElementVNode)("div", {
+      class: "vl-background",
+      onClick: _cache[0] || (_cache[0] = (0,external_commonjs_vue_commonjs2_vue_amd_vue_root_Vue_.withModifiers)(function () {
+        return _ctx.cancel && _ctx.cancel(...arguments);
+      }, ["prevent"])),
+      style: (0,external_commonjs_vue_commonjs2_vue_amd_vue_root_Vue_.normalizeStyle)(_ctx.bgStyle)
+    }, null, 4), (0,external_commonjs_vue_commonjs2_vue_amd_vue_root_Vue_.createElementVNode)("div", _hoisted_2, [(0,external_commonjs_vue_commonjs2_vue_amd_vue_root_Vue_.renderSlot)(_ctx.$slots, "before"), (0,external_commonjs_vue_commonjs2_vue_amd_vue_root_Vue_.renderSlot)(_ctx.$slots, "default", {}, () => [((0,external_commonjs_vue_commonjs2_vue_amd_vue_root_Vue_.openBlock)(), (0,external_commonjs_vue_commonjs2_vue_amd_vue_root_Vue_.createBlock)((0,external_commonjs_vue_commonjs2_vue_amd_vue_root_Vue_.resolveDynamicComponent)(_ctx.loader), {
+      color: _ctx.color,
+      width: _ctx.width,
+      height: _ctx.height
+    }, null, 8, ["color", "width", "height"]))]), (0,external_commonjs_vue_commonjs2_vue_amd_vue_root_Vue_.renderSlot)(_ctx.$slots, "after")])], 14, _hoisted_1), [[external_commonjs_vue_commonjs2_vue_amd_vue_root_Vue_.vShow, _ctx.isActive]])]),
+    _: 3
+  }, 8, ["name"]);
+}
+;// CONCATENATED MODULE: ./src/js/Component.vue?vue&type=template&id=fdbca6ec
+
+;// CONCATENATED MODULE: ./src/js/trapFocusMixin.js
+/* harmony default export */ const trapFocusMixin = ({
+  mounted() {
+    if (this.enforceFocus) {
+      document.addEventListener('focusin', this.focusIn);
+    }
+  },
+
+  methods: {
+    focusIn(event) {
+      // Ignore when loading is not active
+      if (!this.isActive) return;
+      if ( // Event target is the loading div element itself
+      event.target === this.$el || // Event target is inside the loading div
+      this.$el.contains(event.target)) return; // Use container as parent when available otherwise use parent element when isFullPage is false
+
+      let parent = this.container ? this.container : this.isFullPage ? null : this.$el.parentElement;
+
+      if ( // Always prevent when loading is full screen
+      this.isFullPage || // When a parent exist means loader is running inside a container
+      // When loading is NOT full screen and event target is inside the given container
+      parent && parent.contains(event.target)) {
+        event.preventDefault();
+        this.$el.focus();
+      }
+    }
+
+  },
+
+  beforeUnmount() {
+    document.removeEventListener('focusin', this.focusIn);
+  }
+
+});
+;// CONCATENATED MODULE: ./node_modules/.pnpm/babel-loader@8.2.5_rhsdbzevgb5tizdhlla5jsbgyu/node_modules/babel-loader/lib/index.js!./node_modules/.pnpm/vue-loader@17.0.0_webpack@5.74.0/node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/.pnpm/vue-loader@17.0.0_webpack@5.74.0/node_modules/vue-loader/dist/index.js??ruleSet[1].rules[5].use[0]!./src/loaders/spinner.vue?vue&type=template&id=1ed0a811
+
+const spinnervue_type_template_id_1ed0a811_hoisted_1 = ["width", "height", "stroke"];
+
+const spinnervue_type_template_id_1ed0a811_hoisted_2 = /*#__PURE__*/(0,external_commonjs_vue_commonjs2_vue_amd_vue_root_Vue_.createStaticVNode)("<g fill=\"none\" fill-rule=\"evenodd\"><g transform=\"translate(1 1)\" stroke-width=\"2\"><circle stroke-opacity=\".25\" cx=\"18\" cy=\"18\" r=\"18\"></circle><path d=\"M36 18c0-9.94-8.06-18-18-18\"><animateTransform attributeName=\"transform\" type=\"rotate\" from=\"0 18 18\" to=\"360 18 18\" dur=\"0.8s\" repeatCount=\"indefinite\"></animateTransform></path></g></g>", 1);
+
+const _hoisted_3 = [spinnervue_type_template_id_1ed0a811_hoisted_2];
+function spinnervue_type_template_id_1ed0a811_render(_ctx, _cache, $props, $setup, $data, $options) {
+  return (0,external_commonjs_vue_commonjs2_vue_amd_vue_root_Vue_.openBlock)(), (0,external_commonjs_vue_commonjs2_vue_amd_vue_root_Vue_.createElementBlock)("svg", {
+    viewBox: "0 0 38 38",
+    xmlns: "http://www.w3.org/2000/svg",
+    width: _ctx.width,
+    height: _ctx.height,
+    stroke: _ctx.color
+  }, _hoisted_3, 8, spinnervue_type_template_id_1ed0a811_hoisted_1);
+}
+;// CONCATENATED MODULE: ./src/loaders/spinner.vue?vue&type=template&id=1ed0a811
+
+;// CONCATENATED MODULE: ./node_modules/.pnpm/babel-loader@8.2.5_rhsdbzevgb5tizdhlla5jsbgyu/node_modules/babel-loader/lib/index.js!./node_modules/.pnpm/vue-loader@17.0.0_webpack@5.74.0/node_modules/vue-loader/dist/index.js??ruleSet[1].rules[5].use[0]!./src/loaders/spinner.vue?vue&type=script&lang=js
+
+/* harmony default export */ const spinnervue_type_script_lang_js = ((0,external_commonjs_vue_commonjs2_vue_amd_vue_root_Vue_.defineComponent)({
+  name: 'spinner',
+  props: {
+    color: {
+      type: String,
+      default: '#000'
+    },
+    height: {
+      type: Number,
+      default: 64
+    },
+    width: {
+      type: Number,
+      default: 64
+    }
+  }
+}));
+;// CONCATENATED MODULE: ./src/loaders/spinner.vue?vue&type=script&lang=js
+ 
+// EXTERNAL MODULE: ./node_modules/.pnpm/vue-loader@17.0.0_webpack@5.74.0/node_modules/vue-loader/dist/exportHelper.js
+var exportHelper = __nested_webpack_require_1266__(935);
+;// CONCATENATED MODULE: ./src/loaders/spinner.vue
+
+
+
+
+;
+const __exports__ = /*#__PURE__*/(0,exportHelper["default"])(spinnervue_type_script_lang_js, [['render',spinnervue_type_template_id_1ed0a811_render]])
+
+/* harmony default export */ const spinner = (__exports__);
+;// CONCATENATED MODULE: ./node_modules/.pnpm/babel-loader@8.2.5_rhsdbzevgb5tizdhlla5jsbgyu/node_modules/babel-loader/lib/index.js!./node_modules/.pnpm/vue-loader@17.0.0_webpack@5.74.0/node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/.pnpm/vue-loader@17.0.0_webpack@5.74.0/node_modules/vue-loader/dist/index.js??ruleSet[1].rules[5].use[0]!./src/loaders/dots.vue?vue&type=template&id=6ecfb4ba
+
+const dotsvue_type_template_id_6ecfb4ba_hoisted_1 = ["fill", "width", "height"];
+
+const dotsvue_type_template_id_6ecfb4ba_hoisted_2 = /*#__PURE__*/(0,external_commonjs_vue_commonjs2_vue_amd_vue_root_Vue_.createStaticVNode)("<circle cx=\"15\" cy=\"15\" r=\"15\"><animate attributeName=\"r\" from=\"15\" to=\"15\" begin=\"0s\" dur=\"0.8s\" values=\"15;9;15\" calcMode=\"linear\" repeatCount=\"indefinite\"></animate><animate attributeName=\"fill-opacity\" from=\"1\" to=\"1\" begin=\"0s\" dur=\"0.8s\" values=\"1;.5;1\" calcMode=\"linear\" repeatCount=\"indefinite\"></animate></circle><circle cx=\"60\" cy=\"15\" r=\"9\" fill-opacity=\"0.3\"><animate attributeName=\"r\" from=\"9\" to=\"9\" begin=\"0s\" dur=\"0.8s\" values=\"9;15;9\" calcMode=\"linear\" repeatCount=\"indefinite\"></animate><animate attributeName=\"fill-opacity\" from=\"0.5\" to=\"0.5\" begin=\"0s\" dur=\"0.8s\" values=\".5;1;.5\" calcMode=\"linear\" repeatCount=\"indefinite\"></animate></circle><circle cx=\"105\" cy=\"15\" r=\"15\"><animate attributeName=\"r\" from=\"15\" to=\"15\" begin=\"0s\" dur=\"0.8s\" values=\"15;9;15\" calcMode=\"linear\" repeatCount=\"indefinite\"></animate><animate attributeName=\"fill-opacity\" from=\"1\" to=\"1\" begin=\"0s\" dur=\"0.8s\" values=\"1;.5;1\" calcMode=\"linear\" repeatCount=\"indefinite\"></animate></circle>", 3);
+
+const _hoisted_5 = [dotsvue_type_template_id_6ecfb4ba_hoisted_2];
+function dotsvue_type_template_id_6ecfb4ba_render(_ctx, _cache, $props, $setup, $data, $options) {
+  return (0,external_commonjs_vue_commonjs2_vue_amd_vue_root_Vue_.openBlock)(), (0,external_commonjs_vue_commonjs2_vue_amd_vue_root_Vue_.createElementBlock)("svg", {
+    viewBox: "0 0 120 30",
+    xmlns: "http://www.w3.org/2000/svg",
+    fill: _ctx.color,
+    width: _ctx.width,
+    height: _ctx.height
+  }, _hoisted_5, 8, dotsvue_type_template_id_6ecfb4ba_hoisted_1);
+}
+;// CONCATENATED MODULE: ./src/loaders/dots.vue?vue&type=template&id=6ecfb4ba
+
+;// CONCATENATED MODULE: ./node_modules/.pnpm/babel-loader@8.2.5_rhsdbzevgb5tizdhlla5jsbgyu/node_modules/babel-loader/lib/index.js!./node_modules/.pnpm/vue-loader@17.0.0_webpack@5.74.0/node_modules/vue-loader/dist/index.js??ruleSet[1].rules[5].use[0]!./src/loaders/dots.vue?vue&type=script&lang=js
+
+/* harmony default export */ const dotsvue_type_script_lang_js = ((0,external_commonjs_vue_commonjs2_vue_amd_vue_root_Vue_.defineComponent)({
+  name: 'dots',
+  props: {
+    color: {
+      type: String,
+      default: '#000'
+    },
+    height: {
+      type: Number,
+      default: 240
+    },
+    width: {
+      type: Number,
+      default: 60
+    }
+  }
+}));
+;// CONCATENATED MODULE: ./src/loaders/dots.vue?vue&type=script&lang=js
+ 
+;// CONCATENATED MODULE: ./src/loaders/dots.vue
+
+
+
+
+;
+const dots_exports_ = /*#__PURE__*/(0,exportHelper["default"])(dotsvue_type_script_lang_js, [['render',dotsvue_type_template_id_6ecfb4ba_render]])
+
+/* harmony default export */ const dots = (dots_exports_);
+;// CONCATENATED MODULE: ./node_modules/.pnpm/babel-loader@8.2.5_rhsdbzevgb5tizdhlla5jsbgyu/node_modules/babel-loader/lib/index.js!./node_modules/.pnpm/vue-loader@17.0.0_webpack@5.74.0/node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/.pnpm/vue-loader@17.0.0_webpack@5.74.0/node_modules/vue-loader/dist/index.js??ruleSet[1].rules[5].use[0]!./src/loaders/bars.vue?vue&type=template&id=f81ac1c0
+
+const barsvue_type_template_id_f81ac1c0_hoisted_1 = ["height", "width", "fill"];
+
+const barsvue_type_template_id_f81ac1c0_hoisted_2 = /*#__PURE__*/(0,external_commonjs_vue_commonjs2_vue_amd_vue_root_Vue_.createStaticVNode)("<rect x=\"0\" y=\"13\" width=\"4\" height=\"5\"><animate attributeName=\"height\" attributeType=\"XML\" values=\"5;21;5\" begin=\"0s\" dur=\"0.6s\" repeatCount=\"indefinite\"></animate><animate attributeName=\"y\" attributeType=\"XML\" values=\"13; 5; 13\" begin=\"0s\" dur=\"0.6s\" repeatCount=\"indefinite\"></animate></rect><rect x=\"10\" y=\"13\" width=\"4\" height=\"5\"><animate attributeName=\"height\" attributeType=\"XML\" values=\"5;21;5\" begin=\"0.15s\" dur=\"0.6s\" repeatCount=\"indefinite\"></animate><animate attributeName=\"y\" attributeType=\"XML\" values=\"13; 5; 13\" begin=\"0.15s\" dur=\"0.6s\" repeatCount=\"indefinite\"></animate></rect><rect x=\"20\" y=\"13\" width=\"4\" height=\"5\"><animate attributeName=\"height\" attributeType=\"XML\" values=\"5;21;5\" begin=\"0.3s\" dur=\"0.6s\" repeatCount=\"indefinite\"></animate><animate attributeName=\"y\" attributeType=\"XML\" values=\"13; 5; 13\" begin=\"0.3s\" dur=\"0.6s\" repeatCount=\"indefinite\"></animate></rect>", 3);
+
+const barsvue_type_template_id_f81ac1c0_hoisted_5 = [barsvue_type_template_id_f81ac1c0_hoisted_2];
+function barsvue_type_template_id_f81ac1c0_render(_ctx, _cache, $props, $setup, $data, $options) {
+  return (0,external_commonjs_vue_commonjs2_vue_amd_vue_root_Vue_.openBlock)(), (0,external_commonjs_vue_commonjs2_vue_amd_vue_root_Vue_.createElementBlock)("svg", {
+    xmlns: "http://www.w3.org/2000/svg",
+    viewBox: "0 0 30 30",
+    height: _ctx.height,
+    width: _ctx.width,
+    fill: _ctx.color
+  }, barsvue_type_template_id_f81ac1c0_hoisted_5, 8, barsvue_type_template_id_f81ac1c0_hoisted_1);
+}
+;// CONCATENATED MODULE: ./src/loaders/bars.vue?vue&type=template&id=f81ac1c0
+
+;// CONCATENATED MODULE: ./node_modules/.pnpm/babel-loader@8.2.5_rhsdbzevgb5tizdhlla5jsbgyu/node_modules/babel-loader/lib/index.js!./node_modules/.pnpm/vue-loader@17.0.0_webpack@5.74.0/node_modules/vue-loader/dist/index.js??ruleSet[1].rules[5].use[0]!./src/loaders/bars.vue?vue&type=script&lang=js
+
+/* harmony default export */ const barsvue_type_script_lang_js = ((0,external_commonjs_vue_commonjs2_vue_amd_vue_root_Vue_.defineComponent)({
+  name: 'bars',
+  props: {
+    color: {
+      type: String,
+      default: '#000'
+    },
+    height: {
+      type: Number,
+      default: 40
+    },
+    width: {
+      type: Number,
+      default: 40
+    }
+  }
+}));
+;// CONCATENATED MODULE: ./src/loaders/bars.vue?vue&type=script&lang=js
+ 
+;// CONCATENATED MODULE: ./src/loaders/bars.vue
+
+
+
+
+;
+const bars_exports_ = /*#__PURE__*/(0,exportHelper["default"])(barsvue_type_script_lang_js, [['render',barsvue_type_template_id_f81ac1c0_render]])
+
+/* harmony default export */ const bars = (bars_exports_);
+;// CONCATENATED MODULE: ./src/loaders/index.js
+
+
+
+/* harmony default export */ const loaders = ({
+  Spinner: spinner,
+  Dots: dots,
+  Bars: bars
+});
+;// CONCATENATED MODULE: ./node_modules/.pnpm/babel-loader@8.2.5_rhsdbzevgb5tizdhlla5jsbgyu/node_modules/babel-loader/lib/index.js!./node_modules/.pnpm/vue-loader@17.0.0_webpack@5.74.0/node_modules/vue-loader/dist/index.js??ruleSet[1].rules[5].use[0]!./src/js/Component.vue?vue&type=script&lang=js
+
+
+
+
+/* harmony default export */ const Componentvue_type_script_lang_js = ((0,external_commonjs_vue_commonjs2_vue_amd_vue_root_Vue_.defineComponent)({
+  name: 'VueLoading',
+  mixins: [trapFocusMixin],
+  props: {
+    active: Boolean,
+    programmatic: Boolean,
+    container: [Object, Function, MayBeHTMLElement],
+    isFullPage: {
+      type: Boolean,
+      default: true
+    },
+    enforceFocus: {
+      type: Boolean,
+      default: true
+    },
+    lockScroll: Boolean,
+    transition: {
+      type: String,
+      default: 'fade'
+    },
+
+    /**
+     * Allow user to hide the loader
+     */
+    canCancel: Boolean,
+
+    /**
+     * Do something on cancel
+     */
+    onCancel: {
+      type: Function,
+      default: () => {}
+    },
+    color: String,
+    backgroundColor: String,
+    opacity: Number,
+    width: Number,
+    height: Number,
+    zIndex: Number,
+    loader: {
+      type: String,
+      default: 'spinner'
+    }
+  },
+  components: loaders,
+  emits: ['hide', 'update:active'],
+
+  data() {
+    return {
+      // Don't mutate the prop
+      isActive: this.active
+    };
+  },
+
+  mounted() {
+    document.addEventListener('keyup', this.keyPress);
+  },
+
+  methods: {
+    /**
+     * Proxy to hide() method.
+     * Gets called by ESC button or when click outside
+     */
+    cancel() {
+      if (!this.canCancel || !this.isActive) return;
+      this.hide();
+      this.onCancel.apply(null, arguments);
+    },
+
+    /**
+     * Hide and destroy component if it's programmatic.
+     */
+    hide() {
+      this.$emit('hide');
+      this.$emit('update:active', false);
+
+      if (this.programmatic) {
+        this.isActive = false; // Timeout for the animation complete before destroying
+
+        setTimeout(() => {
+          const parent = this.$el.parentElement; // unmount the component
+
+          (0,external_commonjs_vue_commonjs2_vue_amd_vue_root_Vue_.render)(null, parent);
+          removeElement(parent);
+        }, 150);
+      }
+    },
+
+    disableScroll() {
+      if (this.isFullPage && this.lockScroll) {
+        document.body.classList.add('vl-shown');
+      }
+    },
+
+    enableScroll() {
+      if (this.isFullPage && this.lockScroll) {
+        document.body.classList.remove('vl-shown');
+      }
+    },
+
+    /**
+     * Key press event to hide on ESC.
+     */
+    keyPress(event) {
+      // todo keyCode is deprecated
+      if (event.keyCode === 27) this.cancel();
+    }
+
+  },
+  watch: {
+    active(value) {
+      this.isActive = value;
+    },
+
+    isActive(value) {
+      if (value) {
+        this.disableScroll();
+      } else {
+        this.enableScroll();
+      }
+    }
+
+  },
+  computed: {
+    bgStyle() {
+      return {
+        background: this.backgroundColor,
+        opacity: this.opacity
+      };
+    }
+
+  },
+
+  beforeUnmount() {
+    document.removeEventListener('keyup', this.keyPress);
+  }
+
+}));
+;// CONCATENATED MODULE: ./src/js/Component.vue?vue&type=script&lang=js
+ 
+;// CONCATENATED MODULE: ./src/js/Component.vue
+
+
+
+
+;
+const Component_exports_ = /*#__PURE__*/(0,exportHelper["default"])(Componentvue_type_script_lang_js, [['render',render]])
+
+/* harmony default export */ const Component = (Component_exports_);
+;// CONCATENATED MODULE: ./src/js/api.js
+
+
+function useLoading() {
+  let globalProps = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+  let globalSlots = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+  return {
+    show() {
+      let props = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : globalProps;
+      let slots = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : globalSlots;
+      const forceProps = {
+        programmatic: true,
+        lockScroll: true,
+        isFullPage: false,
+        active: true
+      };
+      const propsData = { ...globalProps,
+        ...props,
+        ...forceProps
+      };
+      let container = propsData.container;
+
+      if (!propsData.container) {
+        container = document.body;
+        propsData.isFullPage = true;
+      }
+
+      const mergedSlots = { ...globalSlots,
+        ...slots
+      };
+      const instance = createComponent(Component, propsData, container, mergedSlots);
+      return {
+        hide: instance.ctx.hide
+      };
+    }
+
+  };
+}
+;// CONCATENATED MODULE: ./src/index.js
+
+
+
+
+const LoadingPlugin = function (app) {
+  let props = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+  let slots = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
+  const instance = useLoading(props, slots);
+  app.config.globalProperties.$loading = instance;
+  app.provide('$loading', instance);
+};
+
+/* harmony default export */ const src = (Component);
+
+})();
+
+/******/ 	return __webpack_exports__;
+/******/ })()
+;
+});
 
 /***/ }),
 
