@@ -23565,14 +23565,19 @@ var __default__ = {
     },
     handleSubmit: function handleSubmit(e) {
       var _this2 = this;
+      console.log("entro");
       e.preventDefault();
+      console.log("aa");
       if (this.password.length > 0) {
+        console.log("aaxxx");
         this.$axios.get('/sanctum/csrf-cookie').then(function (response) {
           _this2.$axios.post('api/login', {
             email: _this2.email,
             password: _this2.password
           }).then(function (response) {
             if (response.data.success) {
+              console.log(response.data.success);
+              console.log("algo");
               // window.localStorage.setItem(
               // 	'logueo', JSON.stringify("TRUE")
               // );

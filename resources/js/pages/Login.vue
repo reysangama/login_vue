@@ -122,8 +122,12 @@ export default {
 
 		},
 		handleSubmit(e) {
+			console.log("entro");
+			
 			e.preventDefault()
+			console.log("aa");
 			if (this.password.length > 0) {
+				console.log("aaxxx");
 				this.$axios.get('/sanctum/csrf-cookie').then(response => {
 					this.$axios.post('api/login', {
 						email: this.email,
@@ -131,6 +135,8 @@ export default {
 					})
 						.then(response => {
 							if (response.data.success) {
+								console.log(response.data.success);
+								console.log("algo");
 								// window.localStorage.setItem(
 								// 	'logueo', JSON.stringify("TRUE")
 								// );
