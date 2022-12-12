@@ -19,7 +19,7 @@
             <div class="panel panel-default card-view">
                 <div class="panel-heading">
                     <div class="pull-left">
-                        <button class="btn btn-success btn-icon left-icon" data-toggle="modal" data-target="#modal_perfil" data-whatever="@mdo"  @click="cleanForm"> <i class="fa fa-plus"></i> <span>Nuevo</span></button>
+                        <button class="btn btn-success btn-icon left-icon" data-toggle="modal" data-target="#modal_perfil" data-whatever="@mdo"  @click="cleanForm" ref="open"> <i class="fa fa-plus"></i> <span>Nuevo</span></button>
                     </div>
                     <div class="clearfix"></div>
                 </div>
@@ -40,7 +40,7 @@
                                             <td>{{ index + 1 }}</td>
                                             <td>{{ item.description }}</td>
                                             <td class="text-nowrap">
-                                                <a href="#" class="mr-25" data-toggle="tooltip" data-original-title="Edit"> 
+                                                <a href="#"  @click="editProfile(item.id)" class="mr-25" data-toggle="tooltip" data-original-title="Edit"> 
                                                     <i class="fa fa-pencil text-inverse m-r-10"></i> 
                                                 </a> 
                                                 <a href="#" data-toggle="tooltip" data-original-title="Close"> 
@@ -73,7 +73,7 @@
                         </form>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                        <button type="button" ref="close" class="btn btn-default" data-dismiss="modal">Cerrar</button>
                         <button type="button" class="btn btn-primary"  @click="registerProfile" >Registrar</button>
                     </div>
                 </div>
@@ -98,7 +98,9 @@ created() {
         this.listProfile();
 },
 methods: {
-
+        editProfile(){
+            this.$refs.open.click();
+        },
         async listProfile() {
             this.$axios.get("/sanctum/csrf-cookie").then((response) => {
                 this.$axios
@@ -116,7 +118,8 @@ methods: {
                 this.$axios.post('/api/profiles/', this.form_profile)
                     .then(response => {
                       console.log(response.data.status);
-                      
+                      this.$refs.close.click();
+                      this.listProfile();
                     })
                     .catch(function (error) {
                         console.error(error);
