@@ -135,14 +135,6 @@ export default {
 					})
 						.then(response => {
 							if (response.data.success) {
-								console.log(response.data.success);
-								console.log("algo");
-								// window.localStorage.setItem(
-								// 	'logueo', JSON.stringify("TRUE")
-								// );
-								// window.localStorage.setItem(
-								// 	'session_information', JSON.stringify(response.data)
-								// );
 								this.$router.push({ name: 'dashboard' })
 							} else {
 								this.error = response.data.message
@@ -202,7 +194,7 @@ div.is-relative{
 		0 10px 10px rgba(0, 0, 0, 0.22);
 	position: relative;
 	overflow: hidden;
-
+	width: 378px;
 	max-width: 100%;
 	/* min-height: 500px; */
 	max-height: 100%;
