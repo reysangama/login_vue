@@ -1,552 +1,742 @@
 <template>
 		<loading v-model:active="isLoading" :can-cancel="false"  :is-full-page="true" speed="2" color1="#ffffff" />
 
+		<div class="wrapper">
+	<div id="loader"></div>
 
-	<div class="wrapper theme-1-active pimary-color-green" :class="{
-		' slide-nav-toggle': state_navbar,
-		'': !state_navbar,
-		'sidebar-hover': state_hover_navbar,
-		'': !state_hover_navbar,
-		'mobile-nav-open': state_mobile_nav,
-		'': !state_mobile_nav,
-	
-	
-	}">
-
-	
-		<!-- Top Menu Items -->
-		<nav class="navbar navbar-inverse navbar-fixed-top">
-			<div class="mobile-only-brand pull-left">
-				<div class="nav-header pull-left">
-					<div class="logo-wrap">
-						<a href="#">
-							<img class="brand-img" src="assets/dist/img/logo.png" alt="brand" />
-							<span class="brand-text">Philbert</span>
-						</a>
+  <header class="main-header">
+	<div class="d-flex align-items-center logo-box justify-content-start">
+		<a href="#" class="waves-effect waves-light nav-link d-none d-md-inline-block mx-10 push-btn bg-transparent text-white" data-toggle="push-menu" role="button">
+			<span class="icon-Align-left"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
+		</a>	
+		<!-- Logo -->
+		<a href="index.html" class="logo">
+		  <!-- logo-->
+		  <div class="logo-lg">
+			  <span class="light-logo"><img src="images/logo-light-text.png" alt="logo"></span>
+			  <span class="dark-logo"><img src="images/logo-dark-text.png" alt="logo"></span>
+		  </div>
+		</a>	
+	</div>   
+    <!-- Header Navbar -->
+    <nav class="navbar navbar-static-top">
+      <!-- Sidebar toggle button-->
+	  <div class="app-menu">
+		<ul class="header-megamenu nav">
+			<li class="btn-group nav-item d-md-none">
+				<a href="#" class="waves-effect waves-light nav-link push-btn" data-toggle="push-menu" role="button">
+					<span class="icon-Align-left"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
+			    </a>
+			</li>
+			<li class="btn-group nav-item d-none d-xl-inline-block">
+				<a href="contact_app_chat.html" class="waves-effect waves-light nav-link svg-bt-icon" title="Chat">
+					<i class="icon-Chat"><span class="path1"></span><span class="path2"></span></i>
+			    </a>
+			</li>
+			<li class="btn-group nav-item d-none d-xl-inline-block">
+				<a href="mailbox.html" class="waves-effect waves-light nav-link svg-bt-icon" title="Mailbox">
+					<i class="icon-Mailbox"><span class="path1"></span><span class="path2"></span></i>
+			    </a>
+			</li>
+			<li class="btn-group nav-item d-none d-xl-inline-block">
+				<a href="extra_taskboard.html" class="waves-effect waves-light nav-link svg-bt-icon" title="Taskboard">
+					<i class="icon-Clipboard-check"><span class="path1"></span><span class="path2"></span><span class="path3"></span></i>
+			    </a>
+			</li>
+		</ul> 
+	  </div>
+		
+      <div class="navbar-custom-menu r-side">
+        <ul class="nav navbar-nav">	
+			<li class="btn-group nav-item d-lg-inline-flex d-none">
+				<a href="#" data-provide="fullscreen" class="waves-effect waves-light nav-link full-screen" title="Full Screen">
+					<i class="icon-Expand-arrows"><span class="path1"></span><span class="path2"></span></i>
+			    </a>
+			</li>	  
+			<li class="btn-group d-lg-inline-flex d-none">
+				<div class="app-menu">
+					<div class="search-bx mx-5">
+						<form>
+							<div class="input-group">
+							  <input type="search" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="button-addon2">
+							  <div class="input-group-append">
+								<button class="btn" type="submit" id="button-addon3"><i class="ti-search"></i></button>
+							  </div>
+							</div>
+						</form>
 					</div>
 				</div>
+			</li>
+		  <!-- Notifications -->
+		  <li class="dropdown notifications-menu">
+			<a href="#" class="waves-effect waves-light dropdown-toggle" data-toggle="dropdown" title="Notifications">
+			  <i class="icon-Notifications"><span class="path1"></span><span class="path2"></span></i>
+			</a>
+			<ul class="dropdown-menu animated bounceIn">
 
-				<a class="toggle-left-nav-btn inline-block ml-20 pull-left" @click="clickNagbar" href="#"><i
-						class="zmdi zmdi-menu"></i></a>
-				<a id="toggle_mobile_search" data-toggle="collapse" data-target="#search_form" class="mobile-only-view"
-					href="javascript:void(0);"><i class="zmdi zmdi-search"></i></a>
-				<a id="toggle_mobile_nav" @click="clickMovileNav" class="mobile-only-view" href="javascript:void(0);"><i
-						class="zmdi zmdi-more"></i></a>
-				<form id="search_form" role="search" class="top-nav-search collapse pull-left">
-					<div class="input-group">
-						<input type="text" name="example-input1-group2" class="form-control" placeholder="Search">
-						<span class="input-group-btn">
-							<button type="button" class="btn  btn-default" data-target="#search_form"
-								data-toggle="collapse" aria-label="Close" aria-expanded="true"><i
-									class="zmdi zmdi-search"></i></button>
-						</span>
-					</div>
-				</form>
-			</div>
-			<div id="mobile_only_nav" class="mobile-only-nav pull-right">
-				<ul class="nav navbar-right top-nav pull-right">
-					<li>
-						<a id="open_right_sidebar" href="#"><i class="zmdi zmdi-settings top-nav-icon"></i></a>
-					</li>
-					<li class="dropdown full-width-drp">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i
-								class="zmdi zmdi-more-vert top-nav-icon"></i></a>
-						<ul class="dropdown-menu mega-menu pa-0" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
-						</ul>
-					</li>
-					<li class="dropdown alert-drp">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i
-								class="zmdi zmdi-notifications top-nav-icon"></i><span
-								class="top-nav-icon-badge">5</span></a>
-					</li>
-					<li class="dropdown auth-drp">
-						<a href="#" class="dropdown-toggle pr-0" data-toggle="dropdown"><img
-								src="assets/dist/img/user1.png" alt="user_auth" class="user-auth-img img-circle" /><span
-								class="user-online-status"></span></a>
-						<ul class="dropdown-menu user-auth-dropdown" data-dropdown-in="flipInX"
-							data-dropdown-out="flipOutX">
-							<li>
-								<a href="profile.html"><i class="zmdi zmdi-account"></i><span>Profile</span></a>
-							</li>
-							<li>
-								<a href="#"><i class="zmdi zmdi-card"></i><span>my balance</span></a>
-							</li>
-							<li>
-								<a href="inbox.html"><i class="zmdi zmdi-email"></i><span>Inbox</span></a>
-							</li>
-							<li>
-								<a href="#"><i class="zmdi zmdi-settings"></i><span>Settings</span></a>
-							</li>
-							<li class="divider"></li>
-							<li class="sub-menu show-on-hover">
-								<a href="#" class="dropdown-toggle pr-0 level-2-drp"><i
-										class="zmdi zmdi-check text-success"></i> available</a>
-								<ul class="dropdown-menu open-left-side">
-									<li>
-										<a href="#"><i
-												class="zmdi zmdi-check text-success"></i><span>available</span></a>
-									</li>
-									<li>
-										<a href="#"><i class="zmdi zmdi-circle-o text-warning"></i><span>busy</span></a>
-									</li>
-									<li>
-										<a href="#"><i
-												class="zmdi zmdi-minus-circle-outline text-danger"></i><span>offline</span></a>
-									</li>
-								</ul>
-							</li>
-							<li class="divider"></li>
-							<li>
-								<a @click="logout" href="#"><i class="zmdi zmdi-power"></i><span>Log Out</span></a>
-							</li>
-						</ul>
-					</li>
-				</ul>
-			</div>
-		</nav>
-		<!-- /Top Menu Items -->
-
-		<!-- Left Sidebar Menu -->
-		<div class="fixed-sidebar-left">
-			<ul class="nav navbar-nav side-nav nicescroll-bar" @mouseover="hoverNav" @mouseleave="leaveNav">
-				<li class="navigation-header">
-					<span>Main</span>
-					<i class="zmdi zmdi-more"></i>
-				</li>
-				<template v-for="(module, index) in modules" :key="module.module_id">
-					<li>
-						<a href="javascript:void(0);" data-toggle="collapse" :data-target="'#' + index">
-							<div class="pull-left"><i class="mr-20" :class="module[0].icon"></i><span
-									class="right-nav-text">{{ index }}</span></div>
-							<div class="pull-right"><i class="zmdi zmdi-caret-down"></i></div>
-							<div class="clearfix"></div>
-						</a>
-						<ul :id=index class="collapse collapse-level-1 two-col-list">
-							<li v-for="(sub_module, index) in module" :key="sub_module.sub_module_id">
-								<router-link :to="sub_module.url">{{ sub_module.description_sub_module }}</router-link>
-							</li>
-						</ul>
-					</li>
-				</template>
-
-
-			</ul>
-		</div>
-		<!-- /Left Sidebar Menu -->
-
-		<!-- Right Sidebar Menu -->
-		<div class="fixed-sidebar-right">
-			<ul class="right-sidebar">
-				<li>
-					<div class="tab-struct custom-tab-1">
-						<ul role="tablist" class="nav nav-tabs" id="right_sidebar_tab">
-							<li class="active" role="presentation"><a aria-expanded="true" data-toggle="tab" role="tab"
-									id="chat_tab_btn" href="#chat_tab">chat</a></li>
-							<li role="presentation" class=""><a data-toggle="tab" id="messages_tab_btn" role="tab"
-									href="#messages_tab" aria-expanded="false">messages</a></li>
-							<li role="presentation" class=""><a data-toggle="tab" id="todo_tab_btn" role="tab"
-									href="#todo_tab" aria-expanded="false">todo</a></li>
-						</ul>
-						<div class="tab-content" id="right_sidebar_content">
-							<div id="chat_tab" class="tab-pane fade active in" role="tabpanel">
-								<div class="chat-cmplt-wrap">
-									<div class="chat-box-wrap">
-										<div class="add-friend">
-											<a href="javascript:void(0)" class="inline-block txt-grey">
-												<i class="zmdi zmdi-more"></i>
-											</a>
-											<span class="inline-block txt-dark">users</span>
-											<a href="javascript:void(0)" class="inline-block text-right txt-grey"><i
-													class="zmdi zmdi-plus"></i></a>
-											<div class="clearfix"></div>
-										</div>
-										<form role="search" class="chat-search pl-15 pr-15 pb-15">
-											<div class="input-group">
-												<input type="text" id="example-input1-group2"
-													name="example-input1-group2" class="form-control"
-													placeholder="Search">
-												<span class="input-group-btn">
-													<button type="button" class="btn  btn-default"><i
-															class="zmdi zmdi-search"></i></button>
-												</span>
-											</div>
-										</form>
-										<div id="chat_list_scroll">
-											<div class="nicescroll-bar">
-
-											</div>
-										</div>
-									</div>
-									<div class="recent-chat-box-wrap">
-										<div class="recent-chat-wrap">
-											<div class="panel-heading ma-0">
-												<div class="goto-back">
-													<a id="goto_back" href="javascript:void(0)"
-														class="inline-block txt-grey">
-														<i class="zmdi zmdi-chevron-left"></i>
-													</a>
-													<span class="inline-block txt-dark">ryan</span>
-													<a href="javascript:void(0)"
-														class="inline-block text-right txt-grey"><i
-															class="zmdi zmdi-more"></i></a>
-													<div class="clearfix"></div>
-												</div>
-											</div>
-											<div class="panel-wrapper collapse in">
-												<div class="panel-body pa-0">
-													<div class="chat-content">
-														<ul class="nicescroll-bar pt-20">
-															<li class="friend">
-																<div class="friend-msg-wrap">
-																	<img class="user-img img-circle block pull-left"
-																		src="dist/img/user.png" alt="user" />
-																	<div class="msg pull-left">
-																		<p>Hello Jason, how are you, it's been a long
-																			time since we last met?</p>
-																		<div class="msg-per-detail text-right">
-																			<span class="msg-time txt-grey">2:30
-																				PM</span>
-																		</div>
-																	</div>
-																	<div class="clearfix"></div>
-																</div>
-															</li>
-															<li class="self mb-10">
-																<div class="self-msg-wrap">
-																	<div class="msg block pull-right"> Oh, hi Sarah I'm
-																		have got a new job now and is going great.
-																		<div class="msg-per-detail text-right">
-																			<span class="msg-time txt-grey">2:31
-																				pm</span>
-																		</div>
-																	</div>
-																	<div class="clearfix"></div>
-																</div>
-															</li>
-															<li class="self">
-																<div class="self-msg-wrap">
-																	<div class="msg block pull-right"> How about you?
-																		<div class="msg-per-detail text-right">
-																			<span class="msg-time txt-grey">2:31
-																				pm</span>
-																		</div>
-																	</div>
-																	<div class="clearfix"></div>
-																</div>
-															</li>
-															<li class="friend">
-																<div class="friend-msg-wrap">
-																	<img class="user-img img-circle block pull-left"
-																		src="dist/img/user.png" alt="user" />
-																	<div class="msg pull-left">
-																		<p>Not too bad.</p>
-																		<div class="msg-per-detail  text-right">
-																			<span class="msg-time txt-grey">2:35
-																				pm</span>
-																		</div>
-																	</div>
-																	<div class="clearfix"></div>
-																</div>
-															</li>
-														</ul>
-													</div>
-													<div class="input-group">
-														<input type="text" id="input_msg_send" name="send-msg"
-															class="input-msg-send form-control"
-															placeholder="Type something">
-														<div class="input-group-btn emojis">
-															<div class="dropup">
-																<button type="button"
-																	class="btn  btn-default  dropdown-toggle"
-																	data-toggle="dropdown"><i
-																		class="zmdi zmdi-mood"></i></button>
-																<ul class="dropdown-menu dropdown-menu-right">
-																	<li><a href="javascript:void(0)">Action</a></li>
-																	<li><a href="javascript:void(0)">Another action</a>
-																	</li>
-																	<li class="divider"></li>
-																	<li><a href="javascript:void(0)">Separated link</a>
-																	</li>
-																</ul>
-															</div>
-														</div>
-														<div class="input-group-btn attachment">
-															<div class="fileupload btn  btn-default"><i
-																	class="zmdi zmdi-attachment-alt"></i>
-																<input type="file" class="upload">
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-
-							<div id="messages_tab" class="tab-pane fade" role="tabpanel">
-								<div class="message-box-wrap">
-									<div class="msg-search">
-										<a href="javascript:void(0)" class="inline-block txt-grey">
-											<i class="zmdi zmdi-more"></i>
-										</a>
-										<span class="inline-block txt-dark">messages</span>
-										<a href="javascript:void(0)" class="inline-block text-right txt-grey"><i
-												class="zmdi zmdi-search"></i></a>
-										<div class="clearfix"></div>
-									</div>
-									<div class="set-height-wrap">
-										<div class="streamline message-box nicescroll-bar">
-											<a href="javascript:void(0)">
-												<div class="sl-item unread-message">
-													<div class="sl-avatar avatar avatar-sm avatar-circle">
-														<img class="img-responsive img-circle" src="dist/img/user.png"
-															alt="avatar" />
-													</div>
-													<div class="sl-content">
-														<span
-															class="inline-block capitalize-font   pull-left message-per">Clay
-															Masse</span>
-														<span
-															class="inline-block font-11  pull-right message-time">12:28
-															AM</span>
-														<div class="clearfix"></div>
-														<span class=" truncate message-subject">Themeforest message sent
-															via your envato market profile</span>
-														<p class="txt-grey truncate">Neque porro quisquam est qui
-															dolorem ipsu messm quia dolor sit amet, consectetur,
-															adipisci velit</p>
-													</div>
-												</div>
-											</a>
-											<a href="javascript:void(0)">
-												<div class="sl-item">
-													<div class="sl-avatar avatar avatar-sm avatar-circle">
-														<img class="img-responsive img-circle" src="dist/img/user1.png"
-															alt="avatar" />
-													</div>
-													<div class="sl-content">
-														<span
-															class="inline-block capitalize-font   pull-left message-per">Evie
-															Ono</span>
-														<span class="inline-block font-11  pull-right message-time">1
-															Feb</span>
-														<div class="clearfix"></div>
-														<span class=" truncate message-subject">Pogody theme
-															support</span>
-														<p class="txt-grey truncate">Neque porro quisquam est qui
-															dolorem ipsum quia dolor sit amet, consectetur, adipisci
-															velit</p>
-													</div>
-												</div>
-											</a>
-											<a href="javascript:void(0)">
-												<div class="sl-item">
-													<div class="sl-avatar avatar avatar-sm avatar-circle">
-														<img class="img-responsive img-circle" src="dist/img/user2.png"
-															alt="avatar" />
-													</div>
-													<div class="sl-content">
-														<span
-															class="inline-block capitalize-font   pull-left message-per">Madalyn
-															Rascon</span>
-														<span class="inline-block font-11  pull-right message-time">31
-															Jan</span>
-														<div class="clearfix"></div>
-														<span class=" truncate message-subject">Congratulations from
-															design nominees</span>
-														<p class="txt-grey truncate">Neque porro quisquam est qui
-															dolorem ipsum quia dolor sit amet, consectetur, adipisci
-															velit</p>
-													</div>
-												</div>
-											</a>
-											<a href="javascript:void(0)">
-												<div class="sl-item unread-message">
-													<div class="sl-avatar avatar avatar-sm avatar-circle">
-														<img class="img-responsive img-circle" src="dist/img/user3.png"
-															alt="avatar" />
-													</div>
-													<div class="sl-content">
-														<span
-															class="inline-block capitalize-font   pull-left message-per">Ezequiel
-															Merideth</span>
-														<span class="inline-block font-11  pull-right message-time">29
-															Jan</span>
-														<div class="clearfix"></div>
-														<span class=" truncate message-subject">Themeforest item support
-															message</span>
-														<p class="txt-grey truncate">Neque porro quisquam est qui
-															dolorem ipsum quia dolor sit amet, consectetur, adipisci
-															velit</p>
-													</div>
-												</div>
-											</a>
-											<a href="javascript:void(0)">
-												<div class="sl-item unread-message">
-													<div class="sl-avatar avatar avatar-sm avatar-circle">
-														<img class="img-responsive img-circle" src="dist/img/user4.png"
-															alt="avatar" />
-													</div>
-													<div class="sl-content">
-														<span
-															class="inline-block capitalize-font   pull-left message-per">Jonnie
-															Metoyer</span>
-														<span class="inline-block font-11  pull-right message-time">27
-															Jan</span>
-														<div class="clearfix"></div>
-														<span class=" truncate message-subject">Help with beavis contact
-															form</span>
-														<p class="txt-grey truncate">Neque porro quisquam est qui
-															dolorem ipsum quia dolor sit amet, consectetur, adipisci
-															velit</p>
-													</div>
-												</div>
-											</a>
-											<a href="javascript:void(0)">
-												<div class="sl-item">
-													<div class="sl-avatar avatar avatar-sm avatar-circle">
-														<img class="img-responsive img-circle" src="dist/img/user.png"
-															alt="avatar" />
-													</div>
-													<div class="sl-content">
-														<span
-															class="inline-block capitalize-font   pull-left message-per">Priscila
-															Shy</span>
-														<span class="inline-block font-11  pull-right message-time">19
-															Jan</span>
-														<div class="clearfix"></div>
-														<span class=" truncate message-subject">Your uploaded theme is
-															been selected</span>
-														<p class="txt-grey truncate">Neque porro quisquam est qui
-															dolorem ipsum quia dolor sit amet, consectetur, adipisci
-															velit</p>
-													</div>
-												</div>
-											</a>
-											<a href="javascript:void(0)">
-												<div class="sl-item">
-													<div class="sl-avatar avatar avatar-sm avatar-circle">
-														<img class="img-responsive img-circle" src="dist/img/user1.png"
-															alt="avatar" />
-													</div>
-													<div class="sl-content">
-														<span
-															class="inline-block capitalize-font   pull-left message-per">Linda
-															Stack</span>
-														<span class="inline-block font-11  pull-right message-time">13
-															Jan</span>
-														<div class="clearfix"></div>
-														<span class=" truncate message-subject"> A new rating has been
-															received</span>
-														<p class="txt-grey truncate">Neque porro quisquam est qui
-															dolorem ipsum quia dolor sit amet, consectetur, adipisci
-															velit</p>
-													</div>
-												</div>
-											</a>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div id="todo_tab" class="tab-pane fade" role="tabpanel">
-								<div class="todo-box-wrap">
-									<div class="add-todo">
-										<a href="javascript:void(0)" class="inline-block txt-grey">
-											<i class="zmdi zmdi-more"></i>
-										</a>
-										<span class="inline-block txt-dark">todo list</span>
-										<a href="javascript:void(0)" class="inline-block text-right txt-grey"><i
-												class="zmdi zmdi-plus"></i></a>
-										<div class="clearfix"></div>
-									</div>
-									<div class="set-height-wrap">
-										<!-- Todo-List -->
-										<ul class="todo-list nicescroll-bar">
-											<li class="todo-item">
-												<div class="checkbox checkbox-default">
-													<input type="checkbox" id="checkbox01" />
-													<label for="checkbox01">Record The First Episode</label>
-												</div>
-											</li>
-											<li>
-												<hr class="light-grey-hr" />
-											</li>
-											<li class="todo-item">
-												<div class="checkbox checkbox-pink">
-													<input type="checkbox" id="checkbox02" />
-													<label for="checkbox02">Prepare The Conference Schedule</label>
-												</div>
-											</li>
-											<li>
-												<hr class="light-grey-hr" />
-											</li>
-											<li class="todo-item">
-												<div class="checkbox checkbox-warning">
-													<input type="checkbox" id="checkbox03" checked />
-													<label for="checkbox03">Decide The Live Discussion Time</label>
-												</div>
-											</li>
-											<li>
-												<hr class="light-grey-hr" />
-											</li>
-											<li class="todo-item">
-												<div class="checkbox checkbox-success">
-													<input type="checkbox" id="checkbox04" checked />
-													<label for="checkbox04">Prepare For The Next Project</label>
-												</div>
-											</li>
-											<li>
-												<hr class="light-grey-hr" />
-											</li>
-											<li class="todo-item">
-												<div class="checkbox checkbox-danger">
-													<input type="checkbox" id="checkbox05" checked />
-													<label for="checkbox05">Finish Up AngularJs Tutorial</label>
-												</div>
-											</li>
-											<li>
-												<hr class="light-grey-hr" />
-											</li>
-											<li class="todo-item">
-												<div class="checkbox checkbox-purple">
-													<input type="checkbox" id="checkbox06" checked />
-													<label for="checkbox06">Finish Infinity Project</label>
-												</div>
-											</li>
-											<li>
-												<hr class="light-grey-hr" />
-											</li>
-										</ul>
-										<!-- /Todo-List -->
-									</div>
-								</div>
-							</div>
+			  <li class="header">
+				<div class="p-20">
+					<div class="flexbox">
+						<div>
+							<h4 class="mb-0 mt-0">Notifications</h4>
+						</div>
+						<div>
+							<a href="#" class="text-danger">Clear All</a>
 						</div>
 					</div>
-				</li>
-			</ul>
-		</div>
-		<div class="right-sidebar-backdrop"></div>
-		<!-- /Right Sidebar Backdrop -->
+				</div>
+			  </li>
 
-		<!-- Main Content -->
-		<div class="page-wrapper" :style="style_height">
-			<div class="container-fluid pt-25">
-				<router-view></router-view>
-			</div>
-			<!-- Footer -->
-			<footer class="footer container-fluid pl-30 pr-30">
-				<div class="row">
-					<div class="col-sm-12">
-						<p>2017 &copy; Philbert. Pampered by Hencework</p>
+			  <li>
+				<!-- inner menu: contains the actual data -->
+				<ul class="menu sm-scrol">
+				  <li>
+					<a href="#">
+					  <i class="fa fa-users text-info"></i> Curabitur id eros quis nunc suscipit blandit.
+					</a>
+				  </li>
+				  <li>
+					<a href="#">
+					  <i class="fa fa-warning text-warning"></i> Duis malesuada justo eu sapien elementum, in semper diam posuere.
+					</a>
+				  </li>
+				  <li>
+					<a href="#">
+					  <i class="fa fa-users text-danger"></i> Donec at nisi sit amet tortor commodo porttitor pretium a erat.
+					</a>
+				  </li>
+				  <li>
+					<a href="#">
+					  <i class="fa fa-shopping-cart text-success"></i> In gravida mauris et nisi
+					</a>
+				  </li>
+				  <li>
+					<a href="#">
+					  <i class="fa fa-user text-danger"></i> Praesent eu lacus in libero dictum fermentum.
+					</a>
+				  </li>
+				  <li>
+					<a href="#">
+					  <i class="fa fa-user text-primary"></i> Nunc fringilla lorem 
+					</a>
+				  </li>
+				  <li>
+					<a href="#">
+					  <i class="fa fa-user text-success"></i> Nullam euismod dolor ut quam interdum, at scelerisque ipsum imperdiet.
+					</a>
+				  </li>
+				</ul>
+			  </li>
+			  <li class="footer">
+				  <a href="#">View all</a>
+			  </li>
+			</ul>
+		  </li>	
+		  
+	      <!-- User Account-->
+          <li class="dropdown user user-menu">
+            <a href="#" class="waves-effect waves-light dropdown-toggle" data-toggle="dropdown" title="User">
+				<i class="icon-User"><span class="path1"></span><span class="path2"></span></i>
+            </a>
+            <ul class="dropdown-menu animated flipInX">
+              <li class="user-body">
+				 <a class="dropdown-item" href="#"><i class="ti-user text-muted mr-2"></i> Profile</a>
+				 <a class="dropdown-item" href="#"><i class="ti-wallet text-muted mr-2"></i> My Wallet</a>
+				 <a class="dropdown-item" href="#"><i class="ti-settings text-muted mr-2"></i> Settings</a>
+				 <div class="dropdown-divider"></div>
+				 <a class="dropdown-item" href="#"><i class="ti-lock text-muted mr-2"></i> Logout</a>
+              </li>
+            </ul>
+          </li>	
+		  
+          <!-- Control Sidebar Toggle Button -->
+          <li>
+              <a href="#" data-toggle="control-sidebar" title="Setting" class="waves-effect waves-light">
+			  	<i class="icon-Settings"><span class="path1"></span><span class="path2"></span></i>
+			  </a>
+          </li>
+			
+        </ul>
+      </div>
+    </nav>
+  </header>
+  
+  <!-- Left side column. contains the logo and sidebar -->
+  <aside class="main-sidebar">
+    <!-- sidebar-->
+    <section class="sidebar position-relative">	
+	  	<div class="multinav">
+		  <div class="multinav-scroll" style="height: 100%;">	
+			  <!-- sidebar menu-->
+			  <ul class="sidebar-menu" data-widget="tree">	
+				<li class="header">Dashboard & Apps</li>
+				<li class="treeview">
+				  <a href="#">
+					<i class="icon-Layout-4-blocks"><span class="path1"></span><span class="path2"></span></i>
+					<span>Dashboard</span>
+					<span class="pull-right-container">
+					  <i class="fa fa-angle-right pull-right"></i>
+					</span>
+				  </a>
+				  <ul class="treeview-menu">
+					<li><a href="index.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Dashboard 1</a></li>
+					<li><a href="index2.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Dashboard 2</a></li>
+					<li><a href="index3.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Dashboard 3</a></li>
+					<li><a href="index4.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Dashboard 4</a></li>
+					<li><a href="index5.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Dashboard 5</a></li>
+					<li><a href="index6.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Dashboard 6</a></li>
+				  </ul>
+				</li>
+				<li class="treeview">
+				  <a href="#">
+					<i span class="icon-Layout-grid"><span class="path1"></span><span class="path2"></span></i>
+					<span>Apps</span>
+					<span class="pull-right-container">
+					  <i class="fa fa-angle-right pull-right"></i>
+					</span>
+				  </a>
+				  <ul class="treeview-menu">
+					<li><a href="extra_calendar.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Calendar</a></li>
+					<li><a href="contact_app.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Contact List</a></li>
+					<li><a href="contact_app_chat.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Chat</a></li>
+					<li><a href="extra_taskboard.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Todo</a></li>
+					<li><a href="mailbox.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Mailbox</a></li>
+				  </ul>
+				</li>
+				<li class="header">Components & UI </li>
+
+				<template
+                        v-for="(module, index) in modules"
+                        :key="module.module_id"
+                    >
+					<li class="treeview">
+						<a href="javascript:void(0);">
+							<i class="icon-Write"><span class="path1"></span><span class="path2"></span></i>
+							<span>UI Elements</span>
+							<span class="pull-right-container">
+							<i class="fa fa-angle-right pull-right"></i>
+							</span>
+						</a>
+							<ul :id=index class="treeview-menu">
+							
+								<li  v-for="(sub_module, index) in module"
+                       				 :key="sub_module.sub_module_id">
+									<router-link :to="sub_module.url" >{{sub_module.description_sub_module}}</router-link>
+							</li>
+						</ul>	
+					</li>
+				</template>
+				<li class="treeview">
+				  <a href="#">
+					<i class="icon-Write"><span class="path1"></span><span class="path2"></span></i>
+					<span>UI Elements</span>
+					<span class="pull-right-container">
+					  <i class="fa fa-angle-right pull-right"></i>
+					</span>
+				  </a>
+				  <ul class="treeview-menu">			
+					<li><a href="ui_grid.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Grid System</a></li>								
+					<li><a href="ui_badges.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Badges</a></li>
+				  </ul>
+				</li>			
+				
+				<li class="header">LOGIN & ERROR </li>
+				<li class="treeview">
+				  <a href="#">
+					<i class="icon-Chat-locked"><span class="path1"></span><span class="path2"></span></i>
+					<span>Authentication</span>
+					<span class="pull-right-container">
+					  <i class="fa fa-angle-right pull-right"></i>
+					</span>
+				  </a>
+				  <ul class="treeview-menu">
+					<li><a href="auth_login.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Login</a></li>
+					<li><a href="auth_register.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Register</a></li>
+					<li><a href="auth_lockscreen.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Lockscreen</a></li>
+					<li><a href="auth_user_pass.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Recover password</a></li>	
+				  </ul>
+				</li>
+				<li class="treeview">
+				  <a href="#">
+					<i class="icon-Chat-check"><span class="path1"></span><span class="path2"></span></i>
+					<span>Miscellaneous</span>
+					<span class="pull-right-container">
+					  <i class="fa fa-angle-right pull-right"></i>
+					</span>
+				  </a>
+				  <ul class="treeview-menu">
+					<li><a href="error_404.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Error 404</a></li>
+					<li><a href="error_500.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Error 500</a></li>
+					<li><a href="error_maintenance.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Maintenance</a></li>	
+				  </ul>
+				</li>	 	     
+			  </ul>
+		  </div>
+		</div>
+    </section>
+	<div class="sidebar-footer">
+		<a href="javascript:void(0)" class="link" data-toggle="tooltip" title="" data-original-title="Settings" aria-describedby="tooltip92529"><span class="icon-Settings-2"></span></a>
+		<a href="mailbox.html" class="link" data-toggle="tooltip" title="" data-original-title="Email"><span class="icon-Mail"></span></a>
+		<a href="javascript:void(0)" class="link" data-toggle="tooltip" title="" data-original-title="Logout"><span class="icon-Lock-overturning"><span class="path1"></span><span class="path2"></span></span></a>
+	</div>
+  </aside>
+    
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+	  <div class="container-full">
+		<!-- Content Header (Page header) -->	  
+		<div class="content-header">
+			<div class="d-flex align-items-center">
+				<div class="mr-auto">
+					<h3 class="page-title">Blank page</h3>
+					<div class="d-inline-block align-items-center">
+						<nav>
+							<ol class="breadcrumb">
+								<li class="breadcrumb-item"><a href="#"><i class="mdi mdi-home-outline"></i></a></li>
+								<li class="breadcrumb-item" aria-current="page">Sample Page</li>
+								<li class="breadcrumb-item active" aria-current="page">Blank page</li>
+							</ol>
+						</nav>
 					</div>
 				</div>
-			</footer>
-			<!-- /Footer -->
+				
+			</div>
 		</div>
-		<!-- /Main Content -->
+
+		<!-- Main content -->
+		<section class="content">
+			<div class="row">
+				<div class="col-12">
+					<div class="box">
+						<div class="box-header with-border">
+						  <h4 class="box-title">Title</h4>
+						</div>
+						<div class="box-body">
+						  This is some text within a card block.
+						</div>
+						<!-- /.box-body -->
+						<div class="box-footer">
+						  Footer
+						</div>
+						<!-- /.box-footer-->
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- /.content -->
+	  
+	  </div>
+  </div>
+  <!-- /.content-wrapper -->
+ 
+   <footer class="main-footer">
+    <div class="pull-right d-none d-sm-inline-block">
+        <ul class="nav nav-primary nav-dotted nav-dot-separated justify-content-center justify-content-md-end">
+		  <li class="nav-item">
+			<a class="nav-link" href="javascript:void(0)">FAQ</a>
+		  </li>
+		  <li class="nav-item">
+			<a class="nav-link" href="#">Purchase Now</a>
+		  </li>
+		</ul>
+    </div>
+	  &copy; 2020 <a href="https://www.multipurposethemes.com/">Multipurpose Themes</a>. All Rights Reserved.
+  </footer>
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar">
+	  
+	<div class="rpanel-title"><span class="pull-right btn btn-circle btn-danger"><i class="ion ion-close text-white" data-toggle="control-sidebar"></i></span> </div>  <!-- Create the tabs -->
+    <ul class="nav nav-tabs control-sidebar-tabs">
+      <li class="nav-item"><a href="#control-sidebar-home-tab" data-toggle="tab" class="active"><i class="mdi mdi-message-text"></i></a></li>
+      <li class="nav-item"><a href="#control-sidebar-settings-tab" data-toggle="tab"><i class="mdi mdi-playlist-check"></i></a></li>
+    </ul>
+    <!-- Tab panes -->
+    <div class="tab-content">
+      <!-- Home tab content -->
+      <div class="tab-pane active" id="control-sidebar-home-tab">
+          <div class="flexbox">
+			<a href="javascript:void(0)" class="text-grey">
+				<i class="ti-more"></i>
+			</a>	
+			<p>Users</p>
+			<a href="javascript:void(0)" class="text-right text-grey"><i class="ti-plus"></i></a>
+		  </div>
+		  <div class="lookup lookup-sm lookup-right d-none d-lg-block">
+			<input type="text" name="s" placeholder="Search" class="w-p100">
+		  </div>
+          <div class="media-list media-list-hover mt-20">
+			<div class="media py-10 px-0">
+			  <a class="avatar avatar-lg status-success" href="#">
+				<img src="images/avatar/1.jpg" alt="...">
+			  </a>
+			  <div class="media-body">
+				<p class="font-size-16">
+				  <a class="hover-primary" href="#"><strong>Tyler</strong></a>
+				</p>
+				<p>Praesent tristique diam...</p>
+				  <span>Just now</span>
+			  </div>
+			</div>
+
+			<div class="media py-10 px-0">
+			  <a class="avatar avatar-lg status-danger" href="#">
+				<img src="images/avatar/2.jpg" alt="...">
+			  </a>
+			  <div class="media-body">
+				<p class="font-size-16">
+				  <a class="hover-primary" href="#"><strong>Luke</strong></a>
+				</p>
+				<p>Cras tempor diam ...</p>
+				  <span>33 min ago</span>
+			  </div>
+			</div>
+
+			<div class="media py-10 px-0">
+			  <a class="avatar avatar-lg status-warning" href="#">
+				<img src="images/avatar/3.jpg" alt="...">
+			  </a>
+			  <div class="media-body">
+				<p class="font-size-16">
+				  <a class="hover-primary" href="#"><strong>Evan</strong></a>
+				</p>
+				<p>In posuere tortor vel...</p>
+				  <span>42 min ago</span>
+			  </div>
+			</div>
+
+			<div class="media py-10 px-0">
+			  <a class="avatar avatar-lg status-primary" href="#">
+				<img src="images/avatar/4.jpg" alt="...">
+			  </a>
+			  <div class="media-body">
+				<p class="font-size-16">
+				  <a class="hover-primary" href="#"><strong>Evan</strong></a>
+				</p>
+				<p>In posuere tortor vel...</p>
+				  <span>42 min ago</span>
+			  </div>
+			</div>			
+			
+			<div class="media py-10 px-0">
+			  <a class="avatar avatar-lg status-success" href="#">
+				<img src="images/avatar/1.jpg" alt="...">
+			  </a>
+			  <div class="media-body">
+				<p class="font-size-16">
+				  <a class="hover-primary" href="#"><strong>Tyler</strong></a>
+				</p>
+				<p>Praesent tristique diam...</p>
+				  <span>Just now</span>
+			  </div>
+			</div>
+
+			<div class="media py-10 px-0">
+			  <a class="avatar avatar-lg status-danger" href="#">
+				<img src="images/avatar/2.jpg" alt="...">
+			  </a>
+			  <div class="media-body">
+				<p class="font-size-16">
+				  <a class="hover-primary" href="#"><strong>Luke</strong></a>
+				</p>
+				<p>Cras tempor diam ...</p>
+				  <span>33 min ago</span>
+			  </div>
+			</div>
+
+			<div class="media py-10 px-0">
+			  <a class="avatar avatar-lg status-warning" href="#">
+				<img src="images/avatar/3.jpg" alt="...">
+			  </a>
+			  <div class="media-body">
+				<p class="font-size-16">
+				  <a class="hover-primary" href="#"><strong>Evan</strong></a>
+				</p>
+				<p>In posuere tortor vel...</p>
+				  <span>42 min ago</span>
+			  </div>
+			</div>
+
+			<div class="media py-10 px-0">
+			  <a class="avatar avatar-lg status-primary" href="#">
+				<img src="images/avatar/4.jpg" alt="...">
+			  </a>
+			  <div class="media-body">
+				<p class="font-size-16">
+				  <a class="hover-primary" href="#"><strong>Evan</strong></a>
+				</p>
+				<p>In posuere tortor vel...</p>
+				  <span>42 min ago</span>
+			  </div>
+			</div>
+			  
+		  </div>
+
+      </div>
+      <!-- /.tab-pane -->
+      <!-- Settings tab content -->
+      <div class="tab-pane" id="control-sidebar-settings-tab">
+          <div class="flexbox">
+			<a href="javascript:void(0)" class="text-grey">
+				<i class="ti-more"></i>
+			</a>	
+			<p>Todo List</p>
+			<a href="javascript:void(0)" class="text-right text-grey"><i class="ti-plus"></i></a>
+		  </div>
+        <ul class="todo-list mt-20">
+			<li class="py-15 px-5 by-1">
+			  <!-- checkbox -->
+			  <input type="checkbox" id="basic_checkbox_1" class="filled-in">
+			  <label for="basic_checkbox_1" class="mb-0 h-15"></label>
+			  <!-- todo text -->
+			  <span class="text-line">Nulla vitae purus</span>
+			  <!-- Emphasis label -->
+			  <small class="badge bg-danger"><i class="fa fa-clock-o"></i> 2 mins</small>
+			  <!-- General tools such as edit or delete-->
+			  <div class="tools">
+				<i class="fa fa-edit"></i>
+				<i class="fa fa-trash-o"></i>
+			  </div>
+			</li>
+			<li class="py-15 px-5">
+			  <!-- checkbox -->
+			  <input type="checkbox" id="basic_checkbox_2" class="filled-in">
+			  <label for="basic_checkbox_2" class="mb-0 h-15"></label>
+			  <span class="text-line">Phasellus interdum</span>
+			  <small class="badge bg-info"><i class="fa fa-clock-o"></i> 4 hours</small>
+			  <div class="tools">
+				<i class="fa fa-edit"></i>
+				<i class="fa fa-trash-o"></i>
+			  </div>
+			</li>
+			<li class="py-15 px-5 by-1">
+			  <!-- checkbox -->
+			  <input type="checkbox" id="basic_checkbox_3" class="filled-in">
+			  <label for="basic_checkbox_3" class="mb-0 h-15"></label>
+			  <span class="text-line">Quisque sodales</span>
+			  <small class="badge bg-warning"><i class="fa fa-clock-o"></i> 1 day</small>
+			  <div class="tools">
+				<i class="fa fa-edit"></i>
+				<i class="fa fa-trash-o"></i>
+			  </div>
+			</li>
+			<li class="py-15 px-5">
+			  <!-- checkbox -->
+			  <input type="checkbox" id="basic_checkbox_4" class="filled-in">
+			  <label for="basic_checkbox_4" class="mb-0 h-15"></label>
+			  <span class="text-line">Proin nec mi porta</span>
+			  <small class="badge bg-success"><i class="fa fa-clock-o"></i> 3 days</small>
+			  <div class="tools">
+				<i class="fa fa-edit"></i>
+				<i class="fa fa-trash-o"></i>
+			  </div>
+			</li>
+			<li class="py-15 px-5 by-1">
+			  <!-- checkbox -->
+			  <input type="checkbox" id="basic_checkbox_5" class="filled-in">
+			  <label for="basic_checkbox_5" class="mb-0 h-15"></label>
+			  <span class="text-line">Maecenas scelerisque</span>
+			  <small class="badge bg-primary"><i class="fa fa-clock-o"></i> 1 week</small>
+			  <div class="tools">
+				<i class="fa fa-edit"></i>
+				<i class="fa fa-trash-o"></i>
+			  </div>
+			</li>
+			<li class="py-15 px-5">
+			  <!-- checkbox -->
+			  <input type="checkbox" id="basic_checkbox_6" class="filled-in">
+			  <label for="basic_checkbox_6" class="mb-0 h-15"></label>
+			  <span class="text-line">Vivamus nec orci</span>
+			  <small class="badge bg-info"><i class="fa fa-clock-o"></i> 1 month</small>
+			  <div class="tools">
+				<i class="fa fa-edit"></i>
+				<i class="fa fa-trash-o"></i>
+			  </div>
+			</li>
+			<li class="py-15 px-5 by-1">
+			  <!-- checkbox -->
+			  <input type="checkbox" id="basic_checkbox_7" class="filled-in">
+			  <label for="basic_checkbox_7" class="mb-0 h-15"></label>
+			  <!-- todo text -->
+			  <span class="text-line">Nulla vitae purus</span>
+			  <!-- Emphasis label -->
+			  <small class="badge bg-danger"><i class="fa fa-clock-o"></i> 2 mins</small>
+			  <!-- General tools such as edit or delete-->
+			  <div class="tools">
+				<i class="fa fa-edit"></i>
+				<i class="fa fa-trash-o"></i>
+			  </div>
+			</li>
+			<li class="py-15 px-5">
+			  <!-- checkbox -->
+			  <input type="checkbox" id="basic_checkbox_8" class="filled-in">
+			  <label for="basic_checkbox_8" class="mb-0 h-15"></label>
+			  <span class="text-line">Phasellus interdum</span>
+			  <small class="badge bg-info"><i class="fa fa-clock-o"></i> 4 hours</small>
+			  <div class="tools">
+				<i class="fa fa-edit"></i>
+				<i class="fa fa-trash-o"></i>
+			  </div>
+			</li>
+			<li class="py-15 px-5 by-1">
+			  <!-- checkbox -->
+			  <input type="checkbox" id="basic_checkbox_9" class="filled-in">
+			  <label for="basic_checkbox_9" class="mb-0 h-15"></label>
+			  <span class="text-line">Quisque sodales</span>
+			  <small class="badge bg-warning"><i class="fa fa-clock-o"></i> 1 day</small>
+			  <div class="tools">
+				<i class="fa fa-edit"></i>
+				<i class="fa fa-trash-o"></i>
+			  </div>
+			</li>
+			<li class="py-15 px-5">
+			  <!-- checkbox -->
+			  <input type="checkbox" id="basic_checkbox_10" class="filled-in">
+			  <label for="basic_checkbox_10" class="mb-0 h-15"></label>
+			  <span class="text-line">Proin nec mi porta</span>
+			  <small class="badge bg-success"><i class="fa fa-clock-o"></i> 3 days</small>
+			  <div class="tools">
+				<i class="fa fa-edit"></i>
+				<i class="fa fa-trash-o"></i>
+			  </div>
+			</li>
+		  </ul>
+      </div>
+      <!-- /.tab-pane -->
+    </div>
+  </aside>
+  <!-- /.control-sidebar -->
+  
+  <!-- Add the sidebar's background. This div must be placed immediately after the control sidebar -->
+  <div class="control-sidebar-bg"></div>
+</div>
+<!-- ./wrapper -->
+	
+	<!-- ./side demo panel -->
+	<div class="sticky-toolbar">	    
+	    <a href="#" data-toggle="tooltip" data-placement="left" title="Buy Now" class="waves-effect waves-light btn btn-success btn-flat mb-5 btn-sm" target="_blank">
+			<span class="icon-Money"><span class="path1"></span><span class="path2"></span></span>
+		</a>
+	    <a href="https://themeforest.net/user/multipurposethemes/portfolio" data-toggle="tooltip" data-placement="left" title="Portfolio" class="waves-effect waves-light btn btn-danger btn-flat mb-5 btn-sm" target="_blank">
+			<span class="icon-Image"></span>
+		</a>
+	    <a id="chat-popup" href="#" data-toggle="tooltip" data-placement="left" title="Live Chat" class="waves-effect waves-light btn btn-warning btn-flat btn-sm">
+			<span class="icon-Group-chat"><span class="path1"></span><span class="path2"></span></span>
+		</a>
 	</div>
+	<!-- Sidebar -->
+	
+	<div id="chat-box-body">
+		<div id="chat-circle" class="waves-effect waves-circle btn btn-circle btn-lg btn-warning l-h-70">
+            <div id="chat-overlay"></div>
+            <span class="icon-Group-chat font-size-30"><span class="path1"></span><span class="path2"></span></span>
+		</div>
+
+		<div class="chat-box">
+            <div class="chat-box-header p-15 d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button class="waves-effect waves-circle btn btn-circle btn-primary-light h-40 w-40 rounded-circle l-h-45" type="button" data-toggle="dropdown">
+                      <span class="icon-Add-user font-size-22"><span class="path1"></span><span class="path2"></span></span>
+                  </button>
+                  <div class="dropdown-menu min-w-200">
+                    <a class="dropdown-item font-size-16" href="#">
+                        <span class="icon-Color mr-15"></span>
+                        New Group</a>
+                    <a class="dropdown-item font-size-16" href="#">
+                        <span class="icon-Clipboard mr-15"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span></span>
+                        Contacts</a>
+                    <a class="dropdown-item font-size-16" href="#">
+                        <span class="icon-Group mr-15"><span class="path1"></span><span class="path2"></span></span>
+                        Groups</a>
+                    <a class="dropdown-item font-size-16" href="#">
+                        <span class="icon-Active-call mr-15"><span class="path1"></span><span class="path2"></span></span>
+                        Calls</a>
+                    <a class="dropdown-item font-size-16" href="#">
+                        <span class="icon-Settings1 mr-15"><span class="path1"></span><span class="path2"></span></span>
+                        Settings</a>
+                    <div class="dropdown-divider"></div>
+					<a class="dropdown-item font-size-16" href="#">
+                        <span class="icon-Question-circle mr-15"><span class="path1"></span><span class="path2"></span></span>
+                        Help</a>
+					<a class="dropdown-item font-size-16" href="#">
+                        <span class="icon-Notifications mr-15"><span class="path1"></span><span class="path2"></span></span> 
+                        Privacy</a>
+                  </div>
+                </div>
+                <div class="text-center flex-grow-1">
+                    <div class="text-dark font-size-18">Mayra Sibley</div>
+                    <div>
+                        <span class="badge badge-sm badge-dot badge-primary"></span>
+                        <span class="text-muted font-size-12">Active</span>
+                    </div>
+                </div>
+                <div class="chat-box-toggle">
+                    <button id="chat-box-toggle" class="waves-effect waves-circle btn btn-circle btn-danger-light h-40 w-40 rounded-circle l-h-45" type="button">
+                      <span class="icon-Close font-size-22"><span class="path1"></span><span class="path2"></span></span>
+                    </button>                    
+                </div>
+            </div>
+            <div class="chat-box-body">
+                <div class="chat-box-overlay">   
+                </div>
+                <div class="chat-logs">
+                    <div class="chat-msg user">
+                        <div class="d-flex align-items-center">
+                            <span class="msg-avatar">
+                                <img src="images/avatar/2.jpg" class="avatar avatar-lg">
+                            </span>
+                            <div class="mx-10">
+                                <a href="#" class="text-dark hover-primary font-weight-bold">Mayra Sibley</a>
+                                <p class="text-muted font-size-12 mb-0">2 Hours</p>
+                            </div>
+                        </div>
+                        <div class="cm-msg-text">
+                            Hi there, I'm Jesse and you?
+                        </div>
+                    </div>
+                    <div class="chat-msg self">
+                        <div class="d-flex align-items-center justify-content-end">
+                            <div class="mx-10">
+                                <a href="#" class="text-dark hover-primary font-weight-bold">You</a>
+                                <p class="text-muted font-size-12 mb-0">3 minutes</p>
+                            </div>
+                            <span class="msg-avatar">
+                                <img src="images/avatar/3.jpg" class="avatar avatar-lg">
+                            </span>
+                        </div>
+                        <div class="cm-msg-text">
+                           My name is Anne Clarc.         
+                        </div>        
+                    </div>
+                    <div class="chat-msg user">
+                        <div class="d-flex align-items-center">
+                            <span class="msg-avatar">
+                                <img src="images/avatar/2.jpg" class="avatar avatar-lg">
+                            </span>
+                            <div class="mx-10">
+                                <a href="#" class="text-dark hover-primary font-weight-bold">Mayra Sibley</a>
+                                <p class="text-muted font-size-12 mb-0">40 seconds</p>
+                            </div>
+                        </div>
+                        <div class="cm-msg-text">
+                            Nice to meet you Anne.<br>How can i help you?
+                        </div>
+                    </div>
+                </div><!--chat-log -->
+            </div>
+            <div class="chat-input">      
+                <form>
+                    <input type="text" id="chat-input" placeholder="Send a message..."/>
+                    <button type="submit" class="chat-submit" id="chat-submit">
+                        <span class="icon-Send font-size-22"></span>
+                    </button>
+                </form>      
+            </div>
+		</div>
+	</div>
+
+	
+
+	
 </template>
 
 <script>
@@ -568,16 +758,14 @@ export default {
 			fullPage: true,
 			// 
 			state_navbar: false,
-			state_navbar: true,
+
 			state_mobile_nav: true,
 			state_hover_navbar: false,
 			profile_id: false,
 			name: null,
 			modules: [],
 			style_height: {
-
-				// "max-height": "120% !important",
-				"min-height": "661px !important",
+				"display": "block",
 			},
 		};
 	},
@@ -589,6 +777,7 @@ export default {
 		this.checkSession();
 		this.getModules();
 		this.addStyleWrapper();
+		this.activeMenu();
 		// this.checkSession2();
 	},
 
@@ -604,6 +793,13 @@ export default {
 	//     next();
 	// },
 	methods: {
+		activeMenu(){
+			if (!this.state_navbar) {
+				this.state_navbar = true;
+			} else {
+				this.state_navbar = false;
+			}
+		},
 		clickMovileNav() {
 			if (!this.state_mobile_nav) {
 				this.state_mobile_nav = true;
@@ -618,10 +814,6 @@ export default {
 			this.state_hover_navbar = true;
 		},
 		addStyleWrapper() {
-			let height_now = window.innerHeight + "px";
-			this.style_height = {
-				"min-height": height_now + " !important",
-			};
 		},
 		//  checkSession() {
 		// 	let logueo=window.localStorage.getItem("logueo");
