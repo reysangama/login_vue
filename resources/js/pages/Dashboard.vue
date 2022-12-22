@@ -1,9 +1,8 @@
 <template>
-	<loading v-model:active="isLoading" :can-cancel="false" :is-full-page="true" speed="2" color1="#ffffff" />
+	
 
 	<div class="wrapper">
-		<div id="loader"></div>
-
+		<loading v-model:active="isLoading" :can-cancel="false" :is-full-page="true" loader="dots" speed="1" color="#01579B" />
 		<header class="main-header">
 			<div class="d-flex align-items-center logo-box justify-content-start" :class="{
 				' slide-nav-toggle': state_navbar,
