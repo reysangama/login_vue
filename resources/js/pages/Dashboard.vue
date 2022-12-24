@@ -4,14 +4,7 @@
 	<div class="wrapper">
 		<loading v-model:active="isLoading" :can-cancel="false" :is-full-page="true" loader="dots" speed="1" color="#01579B" />
 		<header class="main-header">
-			<div class="d-flex align-items-center logo-box justify-content-start" :class="{
-				' slide-nav-toggle': state_navbar,
-				'': !state_navbar,
-				'sidebar-hover': state_hover_navbar,
-				'': !state_hover_navbar,
-				'mobile-nav-open': state_mobile_nav,
-				'': !state_mobile_nav,
-			}">
+			<div class="d-flex align-items-center logo-box justify-content-start">
 				<a href="#"
 					class="waves-effect waves-light nav-link d-none d-md-inline-block mx-10 push-btn bg-transparent text-white"
 					@click="clickNagbar" data-toggle="push-menu" role="button">
@@ -218,13 +211,9 @@
 									<h4 class="box-title">Title</h4>
 								</div>
 								<div class="box-body">
-									This is some text within a card block.
+									<router-view></router-view>
 								</div>
 								<!-- /.box-body -->
-								<div class="box-footer">
-									Footer
-								</div>
-								<!-- /.box-footer-->
 							</div>
 						</div>
 					</div>
