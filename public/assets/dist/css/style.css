@@ -2547,7 +2547,7 @@ a#toggle_mobile_nav {
   margin-left: 225px;
   padding: 70px 20px;
   background: #edf1f5;
-  position: relative;
+  position: sticky;
   -webkit-transition: all 0.4s ease;
   -moz-transition: all 0.4s ease;
   transition: all 0.4s ease;
