@@ -66,11 +66,7 @@
 <script  setup>
 
 import {  ref, computed } from "vue";
-
-const email = ref("");
 const hidePassword = ref(true);
-const password = ref("");
-
 const passwordFieldIcon = computed(() => hidePassword.value ? "fa-eye" : "fa-eye-slash");
 const passwordFieldType = computed(() => hidePassword.value ? "password" : "text");
 </script>
