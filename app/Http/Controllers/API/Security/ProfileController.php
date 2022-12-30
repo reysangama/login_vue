@@ -16,7 +16,7 @@ class ProfileController extends Controller
     public function index()
     {
         $profiles = Profile::orderBy('id', 'desc')->get();
-        return response()->json(['profiles' => $profiles]);
+        return response()->json(['row' => $profiles]);
     }
 
     /**

@@ -2547,7 +2547,7 @@ a#toggle_mobile_nav {
   margin-left: 225px;
   padding: 70px 20px;
   background: #edf1f5;
-  position: relative;
+  position:static;
   -webkit-transition: all 0.4s ease;
   -moz-transition: all 0.4s ease;
   transition: all 0.4s ease;
@@ -3096,7 +3096,7 @@ a#toggle_mobile_nav {
   padding: 0 9px; }
 
 footer {
-  position: absolute;
+  position: static;
   bottom: 0;
   width: 100%;
   height: 40px;
@@ -3174,7 +3174,6 @@ footer {
   color: #212121; }
 
 .input-group-addon {
-  position: relative;
   background: transparent none repeat scroll 0 0;
   border-color: #dedede;
   border-radius: 0;

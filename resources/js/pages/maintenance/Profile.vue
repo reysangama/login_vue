@@ -1,15 +1,15 @@
 <template>
     <div class="row heading-bg">
         <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
-          <h5 class="txt-dark">Perfiles</h5>
+            <h5 class="txt-dark">Perfiles</h5>
         </div>
         <!-- Breadcrumb -->
         <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
-          <ol class="breadcrumb">
-            <li><a href="index.html">Dashboard</a></li>
-            <li><a href="#"><span>table</span></a></li>
-            <li class="active"><span>data-table</span></li>
-          </ol>
+            <ol class="breadcrumb">
+                <li><a href="index.html">Dashboard</a></li>
+                <li><a href="#"><span>table</span></a></li>
+                <li class="active"><span>data-table</span></li>
+            </ol>
         </div>
         <!-- /Breadcrumb -->
     </div>
@@ -19,6 +19,7 @@
             <div class="panel panel-default card-view">
                 <div class="panel-heading">
                     <div class="pull-left">
+<<<<<<< HEAD
                         <button class="btn btn-success btn-icon left-icon" data-toggle="modal" data-target="#modal_perfil" data-whatever="@mdo"  @click="cleanForm" ref="open"> <i class="fa fa-plus"></i> <span>Nuevo</span></button>
                     </div>
                     <div class="clearfix"></div>
@@ -76,24 +77,76 @@
                         <button type="button" ref="close" class="btn btn-default" data-dismiss="modal">Cerrar</button>
                         <button type="button" class="btn btn-primary"  @click="registerProfile" >Registrar</button>
                     </div>
+=======
+                        <button class="btn btn-success btn-icon left-icon" data-toggle="modal"
+                            data-target="#modal_perfil" data-whatever="@mdo" @click="cleanForm" ref="open"> <i
+                                class="fa fa-plus"></i> <span>Nuevo</span></button>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <grid-table :path="path" :columns="columns"></grid-table>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="modal_perfil" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel1">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    <h5 class="modal-title" id="exampleModalLabel1">Registrar Perfil</h5>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="recipient-name" class="control-label mb-10">Perfil:</label>
+                            <input type="text" class="form-control" v-model="form_profile.description">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" ref="close" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary" @click="registerProfile">Registrar</button>
+>>>>>>> 10100b51487e206db68e7fc8f40074827aec845f
                 </div>
             </div>
+        </div>
     </div>
 </template>
 
 
 <script>
+import GridTable from "../../components/GridTable.vue";
 export default {
-name: "Perfil",
-data() {
+    name: "Perfil",
+    components: {
+        GridTable
+	},
+    data() {
         return {
+            columns: [
+                    {
+                        text: '#',
+                        sortable: false,
+                        value: false,
+                        id:1
+                    },
+                    {
+                        text: 'Perfil',
+                        sortable: false,
+                        value: "description",
+                        id:2
+                    },
+                ],
             list_profile: [],
+            path:'/api/profiles/',
             form_profile: {
                 id: null,
                 description: null,
             },
         };
     },
+<<<<<<< HEAD
 created() {
         this.listProfile();
 },
@@ -112,14 +165,29 @@ methods: {
                         console.error(error);
                     });
             });
+=======
+    created() {
+       
+    },
+    methods: {
+        editProfile() {
+            this.$refs.open.click();
+>>>>>>> 10100b51487e206db68e7fc8f40074827aec845f
         },
+       
         registerProfile() {
             this.$axios.get('/sanctum/csrf-cookie').then(response => {
                 this.$axios.post('/api/profiles/', this.form_profile)
                     .then(response => {
+<<<<<<< HEAD
                       console.log(response.data.status);
                       this.$refs.close.click();
                       this.listProfile();
+=======
+                        console.log(response.data.status);
+                        this.$refs.close.click();
+                        this.listProfile();
+>>>>>>> 10100b51487e206db68e7fc8f40074827aec845f
                     })
                     .catch(function (error) {
                         console.error(error);
@@ -127,14 +195,14 @@ methods: {
             })
         },
 
-        cleanForm(){
-            this.form_profile={
+        cleanForm() {
+            this.form_profile = {
                 id: null,
                 description: null,
             };
         }
 
 
-}
+    }
 }
 </script>
