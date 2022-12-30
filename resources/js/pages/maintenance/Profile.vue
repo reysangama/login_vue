@@ -25,7 +25,7 @@
                     </div>
                     <div class="clearfix"></div>
                 </div>
-                <grid-table :path="path"></grid-table>
+                <grid-table :path="path" :columns="columns"></grid-table>
             </div>
         </div>
     </div>
@@ -64,6 +64,20 @@ export default {
 	},
     data() {
         return {
+            columns: [
+                    {
+                        text: '#',
+                        sortable: false,
+                        value: false,
+                        id:1
+                    },
+                    {
+                        text: 'Perfil',
+                        sortable: false,
+                        value: "description",
+                        id:2
+                    },
+                ],
             list_profile: [],
             path:'/api/profiles/',
             form_profile: {

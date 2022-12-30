@@ -16,25 +16,23 @@
                             <div class="table-responsive">
                                 <table id="datable_1" class="table table-hover display  pb-30">
                                     <thead>
-                                        <tr>
-                                            <th>#</th>
-                                            <th>Perfil</th>
-                                            <th>Acciones</th>
+                                        <tr >
+                                            <th  v-for="(item, index) in columns" :key="index">{{ item.text}}</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr v-for="(item, index) in list_profile" :key="index">
-                                            <td>{{ index + 1 }}</td>
-                                            <td>{{ item.description }}</td>
-                                            <td class="text-nowrap">
-                                                <a href="#" @click="editProfile(item.id)" class="mr-25"
-                                                    data-toggle="tooltip" data-original-title="Edit">
-                                                    <i class="fa fa-pencil text-inverse m-r-10"></i>
-                                                </a>
-                                                <a href="#" data-toggle="tooltip" data-original-title="Close">
-                                                    <i class="fa fa-close text-danger"></i>
-                                                </a>
-                                            </td>
+                                        <tr v-for="(item, index) in list_row" :key="index">
+                                            <template v-for="(row, key) in columns" :key="key">
+                                                <td v-if="row.text=='#'">
+                                                    {{ index + 1 }}
+                                                </td>
+                                                <td v-else>
+                                                    {{ item[row.value]  }}
+                                                </td>
+
+                                            </template>
+                                           
+                                            
                                         </tr>
                                     </tbody>
                                 </table>
@@ -45,26 +43,28 @@
 </template>
 <script>
 
+
 export default {
     name: "GridTable",
     props:{
         path:String,
+        columns:Array
     },
 	data() {
 		return {
-            list_profile: [],
+            list_row: [],
 		}
 	},
 	created() {
-        this.listProfile();
+        this.list();
 	},
 	methods: {
-		async listProfile() {
+		async list() {
             this.$axios.get("/sanctum/csrf-cookie").then((response) => {
                 this.$axios
                     .get(this.path)
                     .then((response) => {
-                        this.list_profile = response.data.profiles;
+                        this.list_row = response.data.row;
                     })
                     .catch(function (error) {
                         console.error(error);
