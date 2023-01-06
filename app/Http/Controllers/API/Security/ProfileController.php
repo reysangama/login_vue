@@ -3,8 +3,11 @@
 namespace App\Http\Controllers\API\Security;
 
 use App\Http\Controllers\Controller;
+use App\Http\Resources\ProfileCollection;
+use App\Http\Resources\ProfileResource;
 use Illuminate\Http\Request;
 use App\Models\Security\Profile;
+use Symfony\Component\Finder\Iterator\CustomFilterIterator;
 
 class ProfileController extends Controller
 {
@@ -15,8 +18,10 @@ class ProfileController extends Controller
      */
     public function index()
     {
-        $profiles = Profile::orderBy('id', 'desc')->get();
-        return response()->json(['row' => $profiles]);
+        return ProfileResource::collection(Profile::latest()->paginate(10));
+    // return new ProfileCollection(Profile::latest()->paginate(10));
+        // $profiles = Profile::orderBy('id', 'desc')->get();
+        // return response()->json(['row' => $profiles]);
     }
 
     /**
@@ -56,7 +61,7 @@ class ProfileController extends Controller
      */
     public function show($id)
     {
-        //
+        return new ProfileResource(Profile::findOrFial($id));
     }
 
     /**

@@ -36,13 +36,33 @@
                                         </tr>
                                     </tbody>
                                 </table>
+                                <!-- <nav aria-label="Page navigation example">
+                                <ul class="pagination justify-content-center">
+                                    <li class="page-item disabled">
+                                    <a class="page-link" href="#" tabindex="-1">Previous</a>
+                                    </li>
+                                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                    <li class="page-item">
+                                    <a class="page-link" href="#">Next</a>
+                                    </li>
+                                </ul>
+                                </nav> -->
+                                <pagination
+                                v-if="pagination.last_page > 1"
+                                :pagination="pagination"
+                                :offset="5"
+                                @paginate="list()"
+                            ></pagination>
                             </div>
                         </div>
                     </div>
     </div>
+   
 </template>
 <script>
-
+import Pagination from "./PaginationComponent";
 
 export default {
     name: "GridTable",
@@ -50,9 +70,15 @@ export default {
         path:String,
         columns:Array
     },
+    components: {
+        Pagination,
+    },
 	data() {
 		return {
             list_row: [],
+            pagination:{
+                current_page:1,
+            },
 		}
 	},
 	created() {
@@ -60,11 +86,14 @@ export default {
 	},
 	methods: {
 		async list() {
+            
             this.$axios.get("/sanctum/csrf-cookie").then((response) => {
                 this.$axios
-                    .get(this.path)
+                    .get(this.path+'?page='+this.pagination.current_page)
                     .then((response) => {
-                        this.list_row = response.data.row;
+                        this.list_row = response.data.data;
+                        this.pagination = response.data.meta
+;
                     })
                     .catch(function (error) {
                         console.error(error);

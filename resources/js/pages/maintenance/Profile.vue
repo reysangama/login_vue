@@ -25,7 +25,7 @@
                     </div>
                     <div class="clearfix"></div>
                 </div>
-                <grid-table :path="path" :columns="columns"></grid-table>
+                <grid-table :path="path" :columns="columns"  ref="GridTable"></grid-table>
             </div>
         </div>
     </div>
@@ -79,7 +79,7 @@ export default {
                     },
                 ],
             list_profile: [],
-            path:'/api/profiles/',
+            path:'/api/profiles',
             form_profile: {
                 id: null,
                 description: null,
@@ -100,7 +100,8 @@ export default {
                     .then(response => {
                         console.log(response.data.status);
                         this.$refs.close.click();
-                        this.listProfile();
+                        this.$refs.GridTable.list();
+                       
                     })
                     .catch(function (error) {
                         console.error(error);

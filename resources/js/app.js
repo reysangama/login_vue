@@ -4,8 +4,21 @@ require('./bootstrap')
 import App from './App.vue'
 import axios from 'axios'
 import router from './router'
-
+import VueProgressBar from 'vue-progressbar'
+const options = {
+    color: '#bffaf3',
+    failedColor: '#874b4b',
+    thickness: '5px',
+    transition: {
+      speed: '0.2s',
+      opacity: '0.6s',
+      termination: 300
+    },
+    autoRevert: true,
+    location: 'left',
+    inverse: false
+  }
 const app = createApp(App)
 app.config.globalProperties.$axios = axios;
-app.use(router)
+app.use(router,VueProgressBar,options)
 app.mount('#app')
