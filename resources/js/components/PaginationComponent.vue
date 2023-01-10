@@ -1,27 +1,27 @@
 <template>
-    <nav aria-label="...">
-        <ul class="pagination justify-content-center">
+    <div aria-label="..." class="d-flex flex-content-end">
+        <ul  class="pagination  ml-15 mr-15">
             <li class="page-item" :class="{ disabled: pagination.current_page <= 1 }">
-                <a class="page-link" @click.prevent="changePage(1)"  >Primero</a>
+                <a class="page-link" @click.prevent="changePage(1)"  ><i class="fa  fa-angle-double-left"></i></a>
             </li>
             <li class="page-item" :class="{ disabled: pagination.current_page <= 1 }">
-                <a class="page-link" @click.prevent="changePage(pagination.current_page - 1)">Anterior</a>
+                <a class="page-link" @click.prevent="changePage(pagination.current_page - 1)"><i class="fa fa-angle-left"></i></a>
             </li>
 
             <li class="page-item" v-for="page in pages"  :key="page" :class="isCurrentPage(page) ? 'active' : ''">
-                <a class="page-link" @click.prevent="changePage(page)">{{ page }}
-                    <span v-if="isCurrentPage(page)" class="sr-only">(current)</span>
+                <a class="page-link" @click.prevent="changePage(page)"  style="cursor: pointer;">{{ page }}
+                    <span v-if="isCurrentPage(page)" class="sr-only" >(current)</span>
                 </a>
             </li>
 
             <li class="page-item" :class="{ disabled: pagination.current_page >= pagination.last_page }">
-                <a class="page-link" @click.prevent="changePage(pagination.current_page + 1)">Siguiente</a>
+                <a class="page-link" @click.prevent="changePage(pagination.current_page + 1)"><i class="fa fa-angle-right"></i></a>
             </li>
             <li class="page-item" :class="{ disabled: pagination.current_page >= pagination.last_page }">
-                <a class="page-link" @click.prevent="changePage(pagination.last_page)">Último</a>
+                <a class="page-link" @click.prevent="changePage(pagination.last_page)"><i class="fa  fa-angle-double-right"></i></a>
             </li>
         </ul>
-    </nav>
+    </div>
 </template>
 
 <script>
@@ -65,3 +65,10 @@
         }
     }
 </script>
+<style scoped>
+
+
+
+
+
+</style>

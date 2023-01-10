@@ -23,6 +23,13 @@ class ProfileController extends Controller
         // $profiles = Profile::orderBy('id', 'desc')->get();
         // return response()->json(['row' => $profiles]);
     }
+    public function search($query)
+    {
+        
+        return  ProfileResource::collection(Profile::where(function($q) use ($query){
+            $q->where('description','LIKE',"%$query%");
+        })->latest()->paginate(10));
+    }
 
     /**
      * Show the form for creating a new resource.
@@ -63,6 +70,8 @@ class ProfileController extends Controller
     {
         return new ProfileResource(Profile::findOrFial($id));
     }
+
+    
 
     /**
      * Show the form for editing the specified resource.

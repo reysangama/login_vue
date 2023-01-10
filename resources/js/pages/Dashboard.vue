@@ -532,7 +532,7 @@
 
 		<!-- Main Content -->
 		<div class="page-wrapper" :style="style_height">
-			<div class="container-fluid pt-25">
+			<div class="container-fluid pt-5">
 				<router-view></router-view>
 			</div>
 			<!-- Footer -->
@@ -706,4 +706,39 @@ export default {
 .nicescroll-bar {
 	overflow-x: hidden;
 }
+</style>
+<style>
+.d-flex {
+	display: flex ;
+}
+.flex-content-end{
+	justify-content: flex-end;
+}
+.flex-content-center{
+	justify-content: center;
+}
+.flex-aling-items{
+	align-items: center;
+}
+
+.flex-content-between{
+	justify-content: space-between;
+}
+.cpy-1{
+	padding-top:5px !important;
+	padding-bottom: 5px  !important;
+}
+
+/* ESTILOS CSS PARA LAS NOTIFICACIONES */
+.content-notify{
+    margin-bottom: 10px;
+    font-size: 16px;
+    color:white;
+}
+.title-notify{
+    margin-top: 10px;
+    font-size: 20px;
+    color:white;
+}
+
 </style>

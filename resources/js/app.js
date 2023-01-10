@@ -5,6 +5,7 @@ import App from './App.vue'
 import axios from 'axios'
 import router from './router'
 import VueProgressBar from 'vue-progressbar'
+import Notifications from '@kyvg/vue3-notification'
 const options = {
     color: '#bffaf3',
     failedColor: '#874b4b',
@@ -21,4 +22,5 @@ const options = {
 const app = createApp(App)
 app.config.globalProperties.$axios = axios;
 app.use(router,VueProgressBar,options)
+app.use(Notifications)
 app.mount('#app')
