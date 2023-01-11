@@ -9,7 +9,7 @@
                         <div class="button-list mt-0 mb-10 ml-0 mr-0 pt-5">
                             <button class="btn btn-primary btn-icon left-icon mt-0" data-toggle="modal"
                                 data-target="#modal_perfil" data-whatever="@mdo" @click="cleanForm" ref="open"> <i
-                                    class="fa fa-plus"></i> <span>Nuevo</span></button>
+                                    class="fa fa-plus"></i> <span>{{ title }}</span></button>
                             <button class="btn btn-success btn-icon left-icon mt-0" @click="editProfile"
                                 data-whatever="@mdo"> <i class="fa fa-pencil-square-o"></i>
                                 <span>Editar</span></button>
@@ -85,6 +85,15 @@ export default {
             },
         };
     },
+    computed:{
+        title(){
+            let title='Registrar Perfil';
+            if(this.form_profile.id!=null){
+                title='Actualizar Perfil';
+            }
+            return title;
+        }
+    },
     created() {
 
     },
@@ -99,6 +108,17 @@ export default {
                     });
                 return;
             }
+            this.$axios.get('/sanctum/csrf-cookie').then(response => {
+                this.$axios.get(`/api/profiles/edit/${row}`)
+                    .then(response => {
+                         this.form_profile = response.data;
+                        console.log(response.data);
+                    })
+                    .catch(function (error) {
+                        console.error(error);
+                    });
+            })
+       
             this.$refs.open.click();
         },
 

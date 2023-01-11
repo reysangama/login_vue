@@ -76,7 +76,6 @@ export default {
             selected: null,
             query: "",
             theStyle: { backgroundColor: "", },
-            queryFiled: "description",
             list_row: [],
             pagination: {
                 current_page: 1,
@@ -124,7 +123,7 @@ export default {
         reload() {
             this.list();
             this.query = "";
-            this.queryFiled = "name";
+          
         },
         async searchData() {
             this.$axios.get("/sanctum/csrf-cookie").then((response) => {

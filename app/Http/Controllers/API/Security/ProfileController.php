@@ -81,7 +81,8 @@ class ProfileController extends Controller
      */
     public function edit($id)
     {
-        //
+        $profile = Profile::find($id);
+        return response()->json($profile); 
     }
 
     /**

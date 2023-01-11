@@ -15,6 +15,7 @@ Route::get('search/profiles/{query}',[ProfileController::class, 'search'] );
 // Route::get('search/profiles/{field}/{query}',[ProfileController::class, 'search'] );
 Route::get('getModules/{id}', [UserController::class, 'getModules']);
 Route::get('getSession/', [UserController::class, 'getSession']);
+Route::get('profiles/edit/{id}', [ProfileController::class, 'edit']);
 Route::apiResource('profiles', ProfileController::class);
 
 Route::group(['prefix' => 'books', 'middleware' => 'auth:sanctum'], function () {
