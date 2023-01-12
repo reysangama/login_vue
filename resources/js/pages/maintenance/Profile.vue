@@ -9,7 +9,7 @@
                         <div class="button-list mt-0 mb-10 ml-0 mr-0 pt-5">
                             <button class="btn btn-primary btn-icon left-icon mt-0" data-toggle="modal"
                                 data-target="#modal_perfil" data-whatever="@mdo" @click="cleanForm" ref="open"> <i
-                                    class="fa fa-plus"></i> <span>{{ title }}</span></button>
+                                    class="fa fa-plus"></i> <span>Nuevo</span></button>
                             <button class="btn btn-success btn-icon left-icon mt-0" @click="editProfile"
                                 data-whatever="@mdo"> <i class="fa fa-pencil-square-o"></i>
                                 <span>Editar</span></button>
@@ -33,7 +33,7 @@
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
                             aria-hidden="true">&times;</span></button>
-                    <h5 class="modal-title" id="exampleModalLabel1">Registrar Perfil</h5>
+                    <h5 class="modal-title" id="exampleModalLabel1">{{ title }}</h5>
                 </div>
                 <div class="modal-body">
                     <form>
@@ -109,16 +109,14 @@ export default {
                 return;
             }
             this.$axios.get('/sanctum/csrf-cookie').then(response => {
-                this.$axios.get(`/api/profiles/edit/${row}`)
+                this.$axios.get(`/api/profiles/edit/${row.id}`)
                     .then(response => {
                          this.form_profile = response.data;
-                        console.log(response.data);
                     })
                     .catch(function (error) {
                         console.error(error);
                     });
             })
-       
             this.$refs.open.click();
         },
 

@@ -35,7 +35,7 @@
                         </thead>
                         <tbody>
                             <tr @dblclick="edit" v-for="(item, index) in list_row" :key="index"
-                                @click="selectedRow(index)" :style="index == selected && theStyle">
+                                @click="selectedRow(index,item)" :style="index == selected && theStyle">
                                 <template v-for="(row, key) in columns" :key="key">
                                     <td class=" pb-5 pt-5" v-if="row.text == '#'">
                                         {{ index + 1 }}
@@ -73,6 +73,7 @@ export default {
     },
     data() {
         return {
+            item:null,
             selected: null,
             query: "",
             theStyle: { backgroundColor: "", },
@@ -95,12 +96,13 @@ export default {
         this.list();
     },
     methods: {
-        selectedRow(item) {
-            this.selected = item;
+        selectedRow(index,item) {
+            this.selected = index;
+            this.item=item;
             this.theStyle.backgroundColor = "#d2e1ff";
         },
         getSelectedRow() {
-            return this.selected;
+            return this.item;
         },
         edit() {
             this.$emit('edit')
